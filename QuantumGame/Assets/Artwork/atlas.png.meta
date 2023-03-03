@@ -141,10 +141,10 @@ TextureImporter:
       name: reticle
       rect:
         serializedVersion: 2
-        x: 579
-        y: 228
-        width: 25
-        height: 25
+        x: 576
+        y: 224
+        width: 32
+        height: 32
       alignment: 9
       pivot: {x: 0.5000022, y: 0.47555107}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,9 +163,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 81
-        y: 267
-        width: 25
-        height: 25
+        y: 260
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,6 +175,27 @@ TextureImporter:
       bones: []
       spriteID: c12a68c6617b3d4439928a0e3f7539d9
       internalID: 444250206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mesh_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 31
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b33af056f33c849897b37399adcb0a
+      internalID: -123130670
       vertices: []
       indices: 
       edges: []
@@ -191,6 +212,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       floor_0: -2009829480
+      mesh_0: -123130670
       reticle: 1656856376
       wall_0: 444250206
   spritePackingTag: 
