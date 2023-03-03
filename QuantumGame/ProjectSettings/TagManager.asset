@@ -38,9 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3536408183
+    locked: 0
+  - name: Floor
+    uniqueID: 2608566189
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Reticle
     uniqueID: 3083349291
+    locked: 0
+  - name: Walls
+    uniqueID: 262283947
     locked: 0
