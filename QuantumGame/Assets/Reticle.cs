@@ -9,6 +9,7 @@ public class Reticle : MonoBehaviour
     private Vector3 moveDelta;
     private RaycastHit2D hit;
     private double counter;
+    private float gridSize = 0.32f;
 
     // Start is called before the first frame update
     private void Start()
@@ -24,11 +25,16 @@ public class Reticle : MonoBehaviour
         return;
     }
 
+    private float gridSet(float num) {
+
+        return Mathf.Ceil(num) * gridSize;
+    }
+
     private void FixedUpdate()
     {
         //Reset MoveDelta
 
-        double moveTime = 0.2;
+        double moveTime = 0.1;
         
         if (counter < moveTime) counter += Time.deltaTime;
 
@@ -43,7 +49,7 @@ public class Reticle : MonoBehaviour
         Debug.Log(hit);*/
         if (counter >= moveTime) {
 
-            transform.Translate(Mathf.Ceil(moveDelta.x), Mathf.Ceil(moveDelta.y), 0);
+            transform.Translate(gridSet(moveDelta.x), gridSet(moveDelta.y), 0);
             counter = 0;
 
         }
@@ -57,8 +63,8 @@ public class Reticle : MonoBehaviour
 
         }*/
 
-        var currentPos = transform.position;
-        transform.position = new Vector3(Mathf.Round(currentPos.x), Mathf.Round(currentPos.y), Mathf.Round(currentPos.z));
+       /* var currentPos = transform.position;
+        transform.position = new Vector3(Mathf.Round(currentPos.x)*gridSize, Mathf.Round(currentPos.y)*gridSize, Mathf.Round(currentPos.z)*gridSize);*/
 
     }
 }
