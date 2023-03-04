@@ -9,7 +9,6 @@ public class Reticle : MonoBehaviour
     private Vector3 moveDelta;
     private RaycastHit2D hit;
     private double counter;
-    private float gridSize = 0.32f;
 
     // Start is called before the first frame update
     private void Start()
@@ -27,7 +26,7 @@ public class Reticle : MonoBehaviour
 
     private float gridSet(float num) {
 
-        return Mathf.Ceil(num) * gridSize;
+        return Mathf.Ceil(num);
     }
 
     private void FixedUpdate()
@@ -45,8 +44,10 @@ public class Reticle : MonoBehaviour
 
         moveDelta = new Vector3(x, y, 0);
 
-/*        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Reticle", "Blocking"));
-        Debug.Log(hit);*/
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), 1, LayerMask.GetMask("Reticle", "Blocking"));
+        if (hit.collider != null) moveDelta.y = 0;
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), 1, LayerMask.GetMask("Reticle", "Blocking"));
+        if (hit.collider != null) moveDelta.x = 0;
         if (counter >= moveTime) {
 
             transform.Translate(gridSet(moveDelta.x), gridSet(moveDelta.y), 0);
@@ -54,17 +55,25 @@ public class Reticle : MonoBehaviour
 
         }
 
-/*        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Reticle", "Blocking"));
-        if (hit.collider == null && counter >= moveTime)
-        {
+        /*        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Reticle", "Blocking"));
+                if (hit.collider == null && counter >= moveTime)
+                {
 
-            transform.Translate(Mathf.Ceil(moveDelta.x), 0, 0);
-            counter = 0;
+                    transform.Translate(Mathf.Ceil(moveDelta.x), 0, 0);
+                    counter = 0;
 
-        }*/
+                }*/
 
-       /* var currentPos = transform.position;
-        transform.position = new Vector3(Mathf.Round(currentPos.x)*gridSize, Mathf.Round(currentPos.y)*gridSize, Mathf.Round(currentPos.z)*gridSize);*/
+        /*var currentPos = transform.position;
+        transform.position = new Vector3(Mathf.Round(currentPos.x), Mathf.Round(currentPos.y), Mathf.Round(currentPos.z));*/
 
+    }
+
+    private void LateUpdate()
+    {
+        Vector3 viewPos = transform.position;
+        viewPos.x = Mathf.Clamp(viewPos.x, -4, 3);
+        viewPos.y = Mathf.Clamp(viewPos.y, -3, 2);
+        transform.position = viewPos;
     }
 }

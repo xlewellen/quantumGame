@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Reticle.cs" />
+    <Compile Include="Assets\TEEESSTTTT.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
