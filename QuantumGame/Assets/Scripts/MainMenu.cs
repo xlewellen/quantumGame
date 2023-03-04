@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     // OPTIONS TUTORIAL: https://www.youtube.com/watch?v=eki-6QBtDAg
 
     // set this to whatever scene the Start button should go to
-    public string levelSelect;
+    public string levelSelectScene;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void StartGame() {
-        SceneManager.LoadScene(levelSelect);
+        SceneManager.LoadScene(levelSelectScene);
     }
 
     public void OpenOptions() {
