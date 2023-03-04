@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class Reticle : MonoBehaviour
 {
@@ -13,7 +15,14 @@ public class Reticle : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+
         boxCollider = GetComponent<BoxCollider2D>();
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            placeTile();
+        }
     }
 
     private void MoveWait(double time) {
@@ -75,5 +84,13 @@ public class Reticle : MonoBehaviour
         viewPos.x = Mathf.Clamp(viewPos.x, -4, 3);
         viewPos.y = Mathf.Clamp(viewPos.y, -3, 2);
         transform.position = viewPos;
+    }
+
+    public GameObject t;
+
+    [ContextMenu("placeTile")]
+    private void placeTile() {
+        t.transform.position = transform.position;
+        
     }
 }
