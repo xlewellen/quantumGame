@@ -356,7 +356,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -377,7 +377,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,6 +385,69 @@ TextureImporter:
       bones: []
       spriteID: 379b3261bcdc4ad4fba990a1d93c9152
       internalID: -1168931286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generator
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ff20a9a6539fa4881ecada937891ae
+      internalID: -828407715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: object
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 481
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae085f169e4c9b44ab3b37f0a0433482
+      internalID: 755493051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: object1
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 465
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6417e594376cb4280c04c863e3114b
+      internalID: -792377740
       vertices: []
       indices: 
       edges: []
@@ -410,9 +473,12 @@ TextureImporter:
       bend3: -1516483653
       bend4: 1381319253
       floor_0: -2009829480
+      generator: -828407715
       horizontal belt: 1841664633
       leftTbelt: -1168931286
       mesh_0: -123130670
+      object: 755493051
+      object1: -792377740
       reticle: 1656856376
       rightTbelt: -289214234
       vertical belt: 2145299075
