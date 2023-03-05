@@ -22,21 +22,30 @@ public class ObjectManager : MonoBehaviour
     }
 
     private void SpriteUpdate() {
-        if (alpha == 1f) spriteRenderer.sprite = sprites[0];
-        else spriteRenderer.sprite = sprites[1];
+        if (alpha == 1f && beta == 0f) spriteRenderer.sprite = sprites[0];
+        else if (alpha == 0f && beta == 1f) spriteRenderer.sprite = sprites[1];
+        else if (alpha > 0 && beta > 0) spriteRenderer.sprite = sprites[2];
+        else spriteRenderer.sprite = sprites[3];
     }
 
-    private void round() {
+    private void round()
+    {
         if (Mathf.Abs(alpha) < 0.00001)
             alpha = 0f;
         if (Mathf.Abs(beta) < 0.00001)
             alpha = 0f;
 
-        if (Mathf.Abs(alpha) > 0.9999)
+        if (alpha > 0.98)
             alpha = 1f;
-        if (Mathf.Abs(beta) > 0.9999)
+        if (beta > 0.9999)
             beta = 1f;
+
+        if (alpha < -0.9999)
+            alpha = -1f;
+        if (beta < -0.9999)
+            beta = -1f;
     }
+
     public void NotGate() {
         float temp = alpha;
         alpha = beta;
@@ -50,7 +59,6 @@ public class ObjectManager : MonoBehaviour
         float temp1 = beta;
         alpha = (temp0 * half) + (temp1 * half);
         beta = (temp0 * half) - (temp1 * half);
-        round();
     }
 
     public void ZGate() {

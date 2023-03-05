@@ -440,7 +440,7 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -448,6 +448,48 @@ TextureImporter:
       bones: []
       spriteID: 5e6417e594376cb4280c04c863e3114b
       internalID: -792377740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: object2
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 437
+        width: 7
+        height: 7
+      alignment: 9
+      pivot: {x: 0.5256871, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4adf6bbe4722a47a64bdae57684cf1
+      internalID: 1373664849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: object3
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 434
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6392f9b6813bca240b9f69ecb6f79af8
+      internalID: -958225875
       vertices: []
       indices: 
       edges: []
@@ -479,6 +521,8 @@ TextureImporter:
       mesh_0: -123130670
       object: 755493051
       object1: -792377740
+      object2: 1373664849
+      object3: -958225875
       reticle: 1656856376
       rightTbelt: -289214234
       vertical belt: 2145299075

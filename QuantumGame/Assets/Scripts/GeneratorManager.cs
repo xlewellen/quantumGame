@@ -19,8 +19,8 @@ public class GeneratorManager : MonoBehaviour
         Vector3 spawn = new Vector3(transform.position.x + (0.5f), transform.position.y, transform.position.z);
         GameObject obj = Instantiate(objPrefab, spawn, Quaternion.identity);
 
-        obj.GetComponent<ObjectManager>().alpha = 0f;
-        obj.GetComponent<ObjectManager>().beta = 1f;
+        obj.GetComponent<ObjectManager>().alpha = 1f;
+        obj.GetComponent<ObjectManager>().beta = 0f;
 
         return obj;
     }
@@ -32,7 +32,7 @@ public class GeneratorManager : MonoBehaviour
         {
             GameObject obj = spawnObj();
             obj.GetComponent<ObjectManager>().HGate();
-            obj.GetComponent<ObjectManager>().Measure();
+            obj.GetComponent<ObjectManager>().HGate();
 
             timeCount = 0f;
         }

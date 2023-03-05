@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CNotGate
+      name: NotGate
       rect:
         serializedVersion: 2
         x: 381
@@ -211,9 +211,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CNotGate: 1100246949
       Hgate: 976927467
       Mgate: 1423768409
+      NotGate: 1100246949
       Zgate: 736740789
       gates_0: -1328929588
       gates_1: -758719323
