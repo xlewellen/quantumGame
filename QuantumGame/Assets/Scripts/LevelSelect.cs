@@ -11,6 +11,8 @@ public class LevelSelect : MonoBehaviour
     int Z_GATE = 2;
     int NOT_GATE = 3;
     int M_GATE = 4;
+    
+    // Maybe make it public sattic?
     int[] inventory = new int[5];
 
     public string menuScene;
