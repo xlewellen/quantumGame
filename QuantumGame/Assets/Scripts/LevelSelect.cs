@@ -16,6 +16,9 @@ public class LevelSelect : MonoBehaviour
     int[] inventory = new int[5];
 
     public string menuScene;
+
+    public string sampleScene;
+
     public string lvl1, lvl2, lvl3, lvl4, lvl5;
 
     private int curLevel = 1;
@@ -40,27 +43,27 @@ public class LevelSelect : MonoBehaviour
 
     public void LevelOne() {
         makeInv(curLevel = 1);
-        SceneManager.LoadScene(menuScene);
+        SceneManager.LoadScene(sampleScene);
     }
 
     public void LevelTwo() {
         makeInv(curLevel = 2);
-        SceneManager.LoadScene(menuScene);
+        SceneManager.LoadScene(sampleScene);
     }
 
     public void LevelThree() {
         makeInv(curLevel = 3);
-        SceneManager.LoadScene(menuScene);
+        SceneManager.LoadScene(sampleScene);
     }
 
     public void LevelFour() {
         makeInv(curLevel = 4);
-        SceneManager.LoadScene(menuScene);
+        SceneManager.LoadScene(sampleScene);
     }
 
     public void LevelFive() {
         makeInv(curLevel = 5);
-        SceneManager.LoadScene(menuScene);
+        SceneManager.LoadScene(sampleScene);
     }
 
 // TODO: Add cases here to fill the inventory for each level
