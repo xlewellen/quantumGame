@@ -494,6 +494,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: doublegate
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 291
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e000ca54819f74483d54db2534fc9b
+      internalID: 925243213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -514,6 +535,7 @@ TextureImporter:
       bend2: -2051918161
       bend3: -1516483653
       bend4: 1381319253
+      doublegate: 925243213
       floor_0: -2009829480
       generator: -828407715
       horizontal belt: 1841664633
