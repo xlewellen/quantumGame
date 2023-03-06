@@ -9,11 +9,13 @@ public class ReceiverManager : MonoBehaviour
     private int count = 0;
 
     private void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.tag == "Object")
+        {
+            IterateCount(col.gameObject);
+            Debug.Log(GetCount());
 
-        IterateCount(col.gameObject);
-        Debug.Log(GetCount());
-
-        col.gameObject.GetComponent<ObjectManager>().Remove();
+            col.gameObject.GetComponent<ObjectManager>().Remove();
+        }
     }
 
     private void IterateCount(GameObject obj) {

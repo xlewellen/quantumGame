@@ -22,7 +22,8 @@ public class DoubleGateCatch : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Catch(col.gameObject);
+        if (col.gameObject.tag == "Object")
+            Catch(col.gameObject);
     }
 
     public void Catch(GameObject obj) {

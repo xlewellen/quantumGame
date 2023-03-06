@@ -29,19 +29,23 @@ public class GateManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D obj)
     {
-        switch (gate) {
-            case 0:
-                obj.gameObject.GetComponent<ObjectManager>().NotGate();
-                break;
-            case 1:
-                obj.gameObject.GetComponent<ObjectManager>().HGate();
-                break;
-            case 2:
-                obj.gameObject.GetComponent<ObjectManager>().ZGate();
-                break;
-            case 3:
-                obj.gameObject.GetComponent<ObjectManager>().Measure();
-                break;
+        if (obj.gameObject.tag == "Object")
+        {
+            switch (gate)
+            {
+                case 0:
+                    obj.gameObject.GetComponent<ObjectManager>().NotGate();
+                    break;
+                case 1:
+                    obj.gameObject.GetComponent<ObjectManager>().HGate();
+                    break;
+                case 2:
+                    obj.gameObject.GetComponent<ObjectManager>().ZGate();
+                    break;
+                case 3:
+                    obj.gameObject.GetComponent<ObjectManager>().Measure();
+                    break;
+            }
         }
     }
 }
