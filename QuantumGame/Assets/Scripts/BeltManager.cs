@@ -4,19 +4,61 @@ using UnityEngine;
 
 public class BeltManager : MonoBehaviour
 {
+
+    // TODO: determine direction based on what tile the belt is assigned
+
+    private Vector3 vec;
+
+
+    public int direction;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
+    }
+
+    private Vector3 GetDifference(GameObject obj) {
+        Vector3 dir = transform.position - obj.transform.position;
+        if (direction == 0 || direction == 2)
+            dir.x = 0;
+        else
+            dir.y = 0;
+        return dir;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+
+        switch (direction)
+        {
+            case 0:
+                vec = new Vector3(1, 0, 0);
+                break;
+            case 1:
+                vec = new Vector3(0, -1, 0);
+                break;
+            case 2:
+                vec = new Vector3(-1, 0, 0);
+                break;
+            case 3:
+                vec = new Vector3(0, 1, 0);
+                break;
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        other.gameObject.transform.Translate(0,10 * Time.deltaTime,0);
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Object")
+        {
+            Vector3 dif = GetDifference(other.gameObject);
+            other.gameObject.GetComponent<ObjectManager>().SetDir(dif + vec);
+        }
     }
+    private void OnTriggerExit2D(Collider2D other) {
+        Debug.Log("test");
+        other.gameObject.GetComponent<ObjectManager>().SetDir(new Vector3(0,0,0));
+    }
+
 }

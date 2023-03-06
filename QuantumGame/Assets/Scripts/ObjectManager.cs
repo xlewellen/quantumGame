@@ -8,18 +8,31 @@ public class ObjectManager : MonoBehaviour
     public float beta;
     public SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
+    private Vector3 direction;
 
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        direction = new Vector3(0, 0, 0);
+        
     }
 
     private void FixedUpdate()
     {
         SpriteUpdate();
-        transform.Translate(1*Time.deltaTime, 0, 0);
+        Move(direction);
     }
+
+    private void Move(Vector3 vec) {
+        transform.Translate(vec.x * Time.deltaTime, vec.y * Time.deltaTime, 0);
+    }
+
+
+    public void SetDir(Vector3 vec) {
+        direction = vec;
+    }
+
 
     private void SpriteUpdate() {
         if (alpha == 1f && beta == 0f) spriteRenderer.sprite = sprites[0];
