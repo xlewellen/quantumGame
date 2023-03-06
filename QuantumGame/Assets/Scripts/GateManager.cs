@@ -34,11 +34,7 @@ public class GateManager : MonoBehaviour
                 obj.gameObject.GetComponent<ObjectManager>().NotGate();
                 break;
             case 1:
-                Debug.Log(Mathf.Abs(obj.gameObject.GetComponent<ObjectManager>().alpha));
-                Debug.Log(Mathf.Abs(obj.gameObject.GetComponent<ObjectManager>().beta));
                 obj.gameObject.GetComponent<ObjectManager>().HGate();
-                Debug.Log(obj.gameObject.GetComponent<ObjectManager>().alpha);
-                Debug.Log(obj.gameObject.GetComponent<ObjectManager>().beta);
                 break;
             case 2:
                 obj.gameObject.GetComponent<ObjectManager>().ZGate();

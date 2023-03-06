@@ -30,20 +30,14 @@ public class ObjectManager : MonoBehaviour
 
     private void round()
     {
-        if (Mathf.Abs(alpha) < 0.00001)
-            alpha = 0f;
-        if (Mathf.Abs(beta) < 0.00001)
-            alpha = 0f;
+        if (Mathf.Abs(alpha) < 0.01) alpha = 0f;
+        if (Mathf.Abs(beta) < 0.01) beta = 0f;
 
-        if (alpha > 0.98)
-            alpha = 1f;
-        if (beta > 0.9999)
-            beta = 1f;
+        if (alpha > 0.99) alpha = 1f;
+        if (beta > 0.99) beta = 1f;
 
-        if (alpha < -0.9999)
-            alpha = -1f;
-        if (beta < -0.9999)
-            beta = -1f;
+        if (alpha < -0.99) alpha = -1f;
+        if (beta < -0.99) beta = -1f;
     }
 
     public void NotGate() {
@@ -59,6 +53,7 @@ public class ObjectManager : MonoBehaviour
         float temp1 = beta;
         alpha = (temp0 * half) + (temp1 * half);
         beta = (temp0 * half) - (temp1 * half);
+        round();
     }
 
     public void ZGate() {
@@ -80,6 +75,12 @@ public class ObjectManager : MonoBehaviour
             beta = 1f;
         }
     }
+
+    public void Remove()
+    {
+        Destroy(gameObject);
+    }
+
 
 
 }
