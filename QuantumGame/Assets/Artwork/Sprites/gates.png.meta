@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1af3135f189da844fb14d8aa60c82f18
+guid: 9b3086d934f99ab4c901e9e641a9085b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: floor_0
+      name: Zgate
       rect:
         serializedVersion: 2
-        x: 0
-        y: 480
-        width: 32
-        height: 32
+        x: 121
+        y: 38
+        width: 110
+        height: 108
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,41 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3ddb2e7f9e80a1418becb71b9d480d1
-      internalID: -2009829480
+      spriteID: 0c7aaeb9f2ffc19448732226ecfe5748
+      internalID: 736740789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: reticle
+      name: Hgate
       rect:
         serializedVersion: 2
-        x: 576
-        y: 224
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5000022, y: 0.47555107}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 075ec91884b54bc448736d7331acc7fa
-      internalID: -389917825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall_0
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 260
-        width: 32
-        height: 32
+        x: 14
+        y: 41
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c12a68c6617b3d4439928a0e3f7539d9
-      internalID: 444250206
+      spriteID: ce4b4ec867a9c1c4dbaadae28d11d068
+      internalID: 976927467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mesh_0
+      name: Mgate
       rect:
         serializedVersion: 2
-        x: 65
-        y: 31
-        width: 32
-        height: 32
+        x: 249
+        y: 39
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,8 +173,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5b33af056f33c849897b37399adcb0a
-      internalID: -123130670
+      spriteID: f756bd7794680ac46abc04f0d9fb4426
+      internalID: 1423768409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NotGate
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 32
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0607270cfb0ee4aaca8a7bf584863a
+      internalID: 1100246949
       vertices: []
       indices: 
       edges: []
@@ -211,10 +211,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      floor_0: -2009829480
-      mesh_0: -123130670
-      reticle: 1656856376
-      wall_0: 444250206
+      Hgate: 976927467
+      Mgate: 1423768409
+      NotGate: 1100246949
+      Zgate: 736740789
+      gates_0: -1328929588
+      gates_1: -758719323
+      gates_2: 87399725
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -16,14 +16,6 @@ public class Reticle : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    private void MoveWait(double time) {
-        double counter = 0.0;
-        while (counter < time) {
-            counter += Time.deltaTime;
-        }
-        return;
-    }
-
     private float gridSet(float num) {
 
         return Mathf.Ceil(num);
@@ -55,25 +47,6 @@ public class Reticle : MonoBehaviour
 
         }
 
-        /*        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Reticle", "Blocking"));
-                if (hit.collider == null && counter >= moveTime)
-                {
-
-                    transform.Translate(Mathf.Ceil(moveDelta.x), 0, 0);
-                    counter = 0;
-
-                }*/
-
-        /*var currentPos = transform.position;
-        transform.position = new Vector3(Mathf.Round(currentPos.x), Mathf.Round(currentPos.y), Mathf.Round(currentPos.z));*/
-
     }
 
-    private void LateUpdate()
-    {
-        Vector3 viewPos = transform.position;
-        viewPos.x = Mathf.Clamp(viewPos.x, -4, 3);
-        viewPos.y = Mathf.Clamp(viewPos.y, -3, 2);
-        transform.position = viewPos;
-    }
 }
