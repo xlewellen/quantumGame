@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
+  m_Script: {fileID: 11500000, guid: eea616494c0e95c4f93bb1e1e5925cb7, type: 3}
   m_Name: dynamic belt
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 1459240768, guid: 1af3135f189da844fb14d8aa60c82f18, type: 3}
@@ -260,7 +260,7 @@ MonoBehaviour:
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
-    m_PerlinScale: 0.5
+    m_PerlinScale: 0.636
     m_Output: 0
     m_ColliderType: 1
     m_RandomTransform: 0
@@ -271,3 +271,6 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: -1, y: 0, z: 0}
     m_RuleTransform: 0
+  alwaysConnect: 0
+  tilesToConnect: []
+  checkSelf: 1
