@@ -6,8 +6,8 @@ public class GeneratorManager : MonoBehaviour
 {
 
     public GameObject objPrefab;
-    private float spawnDelay = 2f;
-    public float timeCount = 0f;
+    public float spawnDelay = 2f;
+    private float timeCount = 0f;
 
     // Start is called before the first frame update
     void Start()

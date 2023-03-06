@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7425495395830257541}
   - component: {fileID: 7425495395830257540}
   - component: {fileID: 7425495395830257543}
-  m_Layer: 14
+  m_Layer: 12
   m_Name: singlegate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,8 +93,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 262283947
-  m_SortingLayer: 4
+  m_SortingLayerID: 1061142331
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1100246949, guid: 9b3086d934f99ab4c901e9e641a9085b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -208,6 +208,10 @@ PrefabInstance:
     - target: {fileID: 1618349198027127988, guid: 5ac5d232c2530904d9e5ebed508a46da, type: 3}
       propertyPath: m_Name
       value: belt
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618349198027127988, guid: 5ac5d232c2530904d9e5ebed508a46da, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ac5d232c2530904d9e5ebed508a46da, type: 3}
