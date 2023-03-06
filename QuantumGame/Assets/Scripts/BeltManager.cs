@@ -24,7 +24,7 @@ public class BeltManager : MonoBehaviour
             dir.x = 0;
         else
             dir.y = 0;
-        return dir;
+        return 5*dir;
     }
 
     // Update is called once per frame
@@ -57,8 +57,8 @@ public class BeltManager : MonoBehaviour
         }
     }
     private void OnTriggerExit2D(Collider2D other) {
-        Debug.Log("test");
-        other.gameObject.GetComponent<ObjectManager>().SetDir(new Vector3(0,0,0));
+        if (other.gameObject.tag == "Object")
+            other.gameObject.GetComponent<ObjectManager>().SetDir(new Vector3(0,0,0));
     }
 
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7425495395830257541}
   - component: {fileID: 7425495395830257540}
   - component: {fileID: 7425495395830257543}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: singlegate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,8 +52,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7425495395830257541}
   sprites:
   - {fileID: 1100246949, guid: 9b3086d934f99ab4c901e9e641a9085b, type: 3}
-  - {fileID: 976927467, guid: 9b3086d934f99ab4c901e9e641a9085b, type: 3}
-  - {fileID: 736740789, guid: 9b3086d934f99ab4c901e9e641a9085b, type: 3}
+  - {fileID: 1389651794, guid: fc83384456cfa6e4bafd4619bf0c472e, type: 3}
+  - {fileID: 242443384, guid: fc83384456cfa6e4bafd4619bf0c472e, type: 3}
   - {fileID: 1423768409, guid: 9b3086d934f99ab4c901e9e641a9085b, type: 3}
 --- !u!212 &7425495395830257541
 SpriteRenderer:
@@ -93,8 +93,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 262283947
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1100246949, guid: 9b3086d934f99ab4c901e9e641a9085b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -152,7 +152,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.7}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1001 &4796586825216091171
 PrefabInstance:
