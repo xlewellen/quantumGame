@@ -22,7 +22,9 @@ public class ReceiverManager : MonoBehaviour
         float alpha = obj.GetComponent<ObjectManager>().alpha;
         float beta = obj.GetComponent<ObjectManager>().beta;
 
-        if (alpha == targetalpha && beta == targetbeta) count++;
+        if (alpha == targetalpha && beta == targetbeta) {
+            count++;
+        }
     }
 
     private int GetCount() {

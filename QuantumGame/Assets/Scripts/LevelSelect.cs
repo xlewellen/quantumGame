@@ -11,6 +11,7 @@ public class LevelSelect : MonoBehaviour
     int Z_GATE = 2;
     int NOT_GATE = 3;
     int M_GATE = 4;
+    int SWAP_GATE = 5;
     
     // Maybe make it public sattic?
     int[] inventory = new int[5];
@@ -98,6 +99,7 @@ public class LevelSelect : MonoBehaviour
                 inventory[Z_GATE] = 3;
                 inventory[NOT_GATE] = 4;
                 inventory[M_GATE] = 5;
+                inventory[SWAP_GATE] = 6;
                 return;
         }
     }

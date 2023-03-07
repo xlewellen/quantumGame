@@ -10,9 +10,11 @@ public class AdvancedRuleTile : RuleTile<AdvancedRuleTile.Neighbor>
     [Header("Advanced Tile")]
     [Tooltip("If enabled, the tile will connect to these tiles too when the mode is set to \"This\"")]
     public bool alwaysConnect;
-    [Tooltip("Tiles to connect to")]
     public GameObject[] objToConnect;
+    [Tooltip("Group 1 of tiles to connect to")]
     public TileBase[] tilesToConnect;
+    [Tooltip("Group 2 of tiles to connect to")]
+    public TileBase[] tilesToConnect2;
     [Space]
     [Tooltip("Check itseft when the mode is set to \"any\"")]
     public bool checkSelf = true;
@@ -21,20 +23,21 @@ public class AdvancedRuleTile : RuleTile<AdvancedRuleTile.Neighbor>
     {
         public const int Any = 3;
         public const int Specified = 4;
-        public const int Nothing = 5;
-        public const int ObjectSpecified = 6;
+        public const int Specified2 = 5;
+        public const int Nothing = 6;
+        public const int ObjectSpecified = 7;
     }
 
     public override bool RuleMatch(int neighbor, TileBase tile)
     {
-        Debug.Log("Rulematch invoked - " + neighbor);
-        //Debug.Log(GetCount());
+        //Debug.Log("Rulematch invoked - " + neighbor);
         switch (neighbor)
         {
             case Neighbor.This: return Check_This(tile);
             case Neighbor.NotThis: return Check_NotThis(tile);
-            case Neighbor.Any: return Check_Any(tile);
+            //case Neighbor.Any: return Check_Any(tile);
             case Neighbor.Specified: return Check_Specified(tile);
+            case Neighbor.Specified2: return Check_Specified2(tile);
             case Neighbor.Nothing: return Check_Nothing(tile);
             //case Neighbor.ObjectSpecified: return Check_ObjSpecified(obj);
         }
@@ -86,6 +89,12 @@ public class AdvancedRuleTile : RuleTile<AdvancedRuleTile.Neighbor>
     bool Check_Specified(TileBase tile)
     {
         return tilesToConnect.Contains(tile);
+
+        //.Contains requires "using System.Linq;"
+    }
+    bool Check_Specified2(TileBase tile)
+    {
+        return tilesToConnect2.Contains(tile);
 
         //.Contains requires "using System.Linq;"
     }

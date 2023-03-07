@@ -9,15 +9,20 @@ public class BeltManager : MonoBehaviour
 
     private Vector3 vec;
 
+    private SpriteRenderer spriteRenderer;
+    public Sprite[] sprites;
 
     public int direction;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
-
+    public int getDirection()
+    {
+        return direction;
+    }
     private Vector3 GetDifference(GameObject obj) {
         Vector3 dir = transform.position - obj.transform.position;
         if (direction == 0 || direction == 2)
@@ -27,10 +32,14 @@ public class BeltManager : MonoBehaviour
         return 5*dir;
     }
 
+    private void SwitchTexture() {
+        spriteRenderer.sprite = sprites[direction];
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        SwitchTexture();
         switch (direction)
         {
             case 0:

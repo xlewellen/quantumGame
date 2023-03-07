@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b261352b006914599f6d48cd53a4ec, type: 3}
   m_Name: dynamic belt
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 1459240768, guid: 1af3135f189da844fb14d8aa60c82f18, type: 3}
-  m_DefaultGameObject: {fileID: 0}
+  m_DefaultSprite: {fileID: -1357605788, guid: 87cd1966e5a2e4540a647b31d3ea0dbe, type: 3}
+  m_DefaultGameObject: {fileID: 1618349198027127988, guid: 7cd0e3a44dceece4b8e565157ea50c21, type: 3}
   m_DefaultColliderType: 1
   m_TilingRules:
   - m_Id: 6
@@ -274,4 +274,5 @@ MonoBehaviour:
   alwaysConnect: 0
   objToConnect: []
   tilesToConnect: []
+  tilesToConnect2: []
   checkSelf: 1

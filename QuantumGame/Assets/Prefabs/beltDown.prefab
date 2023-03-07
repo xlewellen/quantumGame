@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11bd719824ade314f8f3bcf83e7c4ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites: []
   direction: 1
 --- !u!61 &1618349198027127987
 BoxCollider2D:
