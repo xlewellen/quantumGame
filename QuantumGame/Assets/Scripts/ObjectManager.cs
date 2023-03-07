@@ -26,6 +26,7 @@ public class ObjectManager : MonoBehaviour
     {
         SpriteUpdate();
         Move(direction);
+        transform.rotation = Quaternion.identity;
     }
 
     private void Move(Vector3 vec) {
