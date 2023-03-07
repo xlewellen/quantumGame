@@ -2600,6 +2600,7 @@ GameObject:
   - component: {fileID: 1965056970}
   - component: {fileID: 1965056969}
   - component: {fileID: 1965056968}
+  - component: {fileID: 1965056972}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -2689,6 +2690,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1965056972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965056967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc37f8c0987c19b4788467663a959601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reticlePrefab: {fileID: 0}
+  gatePrefab: {fileID: 0}
+  beltPrefab: {fileID: 0}
+  doublePrefab: {fileID: 0}
+  map: {fileID: 0}
+  invSelect: 0
+  invCounts: 
+  itemCount1: {fileID: 265072967}
+  itemCount2: {fileID: 1977355536}
+  itemCount3: {fileID: 367741093}
+  itemCount4: {fileID: 395127457}
+  itemCount5: {fileID: 1549238290}
+  itemCount6: {fileID: 1971100149}
 --- !u!224 &1969498950 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1771636877430657458, guid: cafc114be088ecf40b7af8fcbccc0c41, type: 3}
@@ -2866,7 +2892,6 @@ GameObject:
   - component: {fileID: 2059275463}
   - component: {fileID: 2059275462}
   - component: {fileID: 2059275461}
-  - component: {fileID: 2059275464}
   m_Layer: 5
   m_Name: Hotbar
   m_TagString: Untagged
@@ -2962,31 +2987,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059275459}
   m_CullTransparentMesh: 1
---- !u!114 &2059275464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059275459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc37f8c0987c19b4788467663a959601, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reticlePrefab: {fileID: 0}
-  gatePrefab: {fileID: 0}
-  beltPrefab: {fileID: 0}
-  doublePrefab: {fileID: 0}
-  map: {fileID: 0}
-  invSelect: 0
-  invCounts: 
-  itemCount1: {fileID: 265072967}
-  itemCount2: {fileID: 1977355536}
-  itemCount3: {fileID: 367741093}
-  itemCount4: {fileID: 395127457}
-  itemCount5: {fileID: 1549238290}
-  itemCount6: {fileID: 1971100149}
 --- !u!1 &2111986101
 GameObject:
   m_ObjectHideFlags: 0
