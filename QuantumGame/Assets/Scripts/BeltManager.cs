@@ -19,7 +19,10 @@ public class BeltManager : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-
+    public int getDirection()
+    {
+        return direction;
+    }
     private Vector3 GetDifference(GameObject obj) {
         Vector3 dir = transform.position - obj.transform.position;
         if (direction == 0 || direction == 2)
