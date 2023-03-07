@@ -21,7 +21,12 @@ public class LevelSelect : MonoBehaviour
 
     public string lvl1, lvl2, lvl3, lvl4, lvl5;
 
-    private int curLevel = 1;
+    public int curLevel = 1;
+
+    public GameObject generator;
+
+    public GameObject reciever;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,31 +44,47 @@ public class LevelSelect : MonoBehaviour
         SceneManager.LoadScene(menuScene);
     }
 
-    // TODO: change menuScene with the approproate lvl variable
 
+    void OnSceneLoaded (Scene scene, LoadSceneMode mode) {
+        if (curLevel == 1) {
+            Instantiate(generator, new Vector3(0,0,0), Quaternion.identity);
+        } else if (curLevel == 2) {
+            
+        }
+    }
+
+    // TODO: change menuScene with the approproate lvl variable
+    // x: -6 to 5, y: -4 to 4
     public void LevelOne() {
         makeInv(curLevel = 1);
         SceneManager.LoadScene(sampleScene);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        //Instantiate(generator, new Vector3(3,0,0), Quaternion.identity);
     }
 
     public void LevelTwo() {
         makeInv(curLevel = 2);
         SceneManager.LoadScene(sampleScene);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void LevelThree() {
         makeInv(curLevel = 3);
         SceneManager.LoadScene(sampleScene);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void LevelFour() {
         makeInv(curLevel = 4);
         SceneManager.LoadScene(sampleScene);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void LevelFive() {
         makeInv(curLevel = 5);
         SceneManager.LoadScene(sampleScene);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
 // TODO: Add cases here to fill the inventory for each level

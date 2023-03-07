@@ -1054,12 +1054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e514ef3ce2b23543af5be90a95fc615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TRACKS: 0
-  H_GATE: 1
-  Z_GATE: 2
-  NOT_GATE: 3
-  M_GATE: 4
-  inventory: 0000000000000000000000000000000000000000
   menuScene: Menu
   sampleScene: SampleScene
   lvl1: 
@@ -1067,7 +1061,8 @@ MonoBehaviour:
   lvl3: 
   lvl4: 
   lvl5: 
-  curLevel: 1
+  generator: {fileID: 1184474397652283946, guid: 650891fc2ba19e84a8c9cad4b1984a1d, type: 3}
+  reciever: {fileID: 4633214678858044012, guid: 291930a0f1935474bb951330c6c38dab, type: 3}
 --- !u!1 &1002179799
 GameObject:
   m_ObjectHideFlags: 0
