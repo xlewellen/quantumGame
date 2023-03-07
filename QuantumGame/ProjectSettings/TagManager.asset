@@ -18,10 +18,10 @@ TagManager:
   - 
   - Blocking
   - 
-  - 
-  - 
-  - 
-  - 
+  - Belt
+  - Object
+  - Placeable
+  - Unplaceable
   - 
   - 
   - Reticle
@@ -49,6 +49,15 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Belts
+    uniqueID: 646088151
+    locked: 0
+  - name: Objects
+    uniqueID: 1745142461
+    locked: 0
+  - name: Gates
+    uniqueID: 1061142331
     locked: 0
   - name: Reticle
     uniqueID: 3083349291

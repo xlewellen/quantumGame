@@ -9,16 +9,21 @@ public class ReticleManager : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Vector3 moveDelta;
     private RaycastHit2D hit;
+
     private double rotatecounter;
     private double counter;
     private double moveTime = 0.1;
-    public GameObject objPrefab;
-    public int objDirection;
-    public int objType;
-    public Tilemap map;
-    public AdvancedRuleTile belt;
 
-    // Start is called before the first frame update
+    public GameObject gatePrefab;
+    public GameObject beltPrefab;
+
+    public int prefabDirection;
+    public int prefabType;
+
+
+/*    public Tilemap map;
+    public AdvancedRuleTile belt;*/
+
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
@@ -71,36 +76,48 @@ public class ReticleManager : MonoBehaviour
 
     private void RotateCW()
     {
-        objDirection++;
-        if (objDirection > 3) objDirection = 0;
+        prefabDirection++;
+        if (prefabDirection > 3) prefabDirection = 0;
     }
 
     private void RotateCCW()
     {
-        objDirection--;
-        if (objDirection < 0) objDirection = 3;
+        prefabDirection--;
+        if (prefabDirection < 0) prefabDirection = 3;
     }
 
-    private void PlaceGate(GameObject objPrefab, int type, int direction) {
-        
-        if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Placeable", "Unplaceable")))
+    private void PlaceUnitary(GameObject prefab, int direction, int type = -1) {
+
+        if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Placeable", "Unplaceable","Belt")))
         {
             Debug.Log("Blocked");
+            return;
+        }
+        RemovePlaceable();
+        Vector3 spawn = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        GameObject obj = Instantiate(prefab, spawn, Quaternion.identity);
+        if (type == -1)
+        {
+            obj.GetComponent<BeltManager>().direction = direction;
         }
         else {
-            RemovePlaceable();
-            Vector3 spawn = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            GameObject obj = Instantiate(objPrefab, spawn, Quaternion.identity);
             obj.GetComponent<GateManager>().gate = type;
             obj.GetComponentInChildren<BeltManager>().direction = direction;
         }
     }
 
-    private void PlaceBelt(AdvancedRuleTile belt) {
-        Vector3 vec = transform.position;
-        map.SetTile(new Vector3Int((int) vec.x, (int)vec.y, (int)vec.z), belt);
+/*    private void PlaceBelt(AdvancedRuleTile belt) {
+        if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Placeable", "Unplaceable","Belt")))
+        {
+            Debug.Log("Blocked");
+        }
+        else {
+            Vector3 vec = transform.position;
+            map.SetTile(new Vector3Int((int)vec.x, (int)vec.y, (int)vec.z), belt);
+        }
     
-    }
+    }*/
+
 
     private void RemovePlaceable() {
         Collider2D[] contacts = new Collider2D[10];
@@ -116,8 +133,8 @@ public class ReticleManager : MonoBehaviour
             Destroy(contacts[i].gameObject);
         }
 
-        Vector3 vec = transform.position;
-        map.SetTile(new Vector3Int((int)vec.x, (int)vec.y, (int)vec.z), null);
+/*        Vector3 vec = transform.position;
+        map.SetTile(new Vector3Int((int)vec.x, (int)vec.y, (int)vec.z), null);*/
     }
 
     private void FixedUpdate()
@@ -125,9 +142,9 @@ public class ReticleManager : MonoBehaviour
         PlayerMove();
         Rotate();
         if (Input.GetKey("z"))
-            PlaceGate(objPrefab, objType, objDirection);
+            PlaceUnitary(gatePrefab, prefabDirection, prefabType);
         if (Input.GetKey("c"))
-            PlaceBelt(belt);
+            PlaceUnitary(beltPrefab, prefabDirection);
         if (Input.GetKey("x"))
             RemovePlaceable();
     }

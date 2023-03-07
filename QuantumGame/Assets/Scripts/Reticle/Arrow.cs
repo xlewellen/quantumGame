@@ -24,10 +24,7 @@ public class Arrow : MonoBehaviour
 
     private void SpriteUpdate()
     {
-        int dir = parent.GetComponent<ReticleManager>().objDirection;
-        if (dir == 0) spriteRenderer.sprite = sprites[0];
-        else if (dir == 1) spriteRenderer.sprite = sprites[1];
-        else if (dir == 2) spriteRenderer.sprite = sprites[2];
-        else spriteRenderer.sprite = sprites[3];
+        int dir = parent.GetComponent<ReticleManager>().prefabDirection;
+        spriteRenderer.sprite = sprites[dir];
     }
 }

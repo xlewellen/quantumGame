@@ -9,13 +9,15 @@ public class BeltManager : MonoBehaviour
 
     private Vector3 vec;
 
+    private SpriteRenderer spriteRenderer;
+    public Sprite[] sprites;
 
     public int direction;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private Vector3 GetDifference(GameObject obj) {
@@ -27,10 +29,14 @@ public class BeltManager : MonoBehaviour
         return 5*dir;
     }
 
+    private void SwitchTexture() {
+        spriteRenderer.sprite = sprites[direction];
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        SwitchTexture();
         switch (direction)
         {
             case 0:
