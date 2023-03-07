@@ -59,7 +59,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Scripts\BeltManager.cs" />
-    <Compile Include="Assets\Scripts\AdvancedRuleTile.cs" />
+    <Compile Include="Assets\Scripts\AdvancedRuleTile\AdvancedRuleTile.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
@@ -103,6 +103,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\Reticle\Arrow.cs" />
     <Compile Include="Assets\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\AdvancedRuleTile\AdvancedRuleTileEditor.cs" />
+    <Compile Include="Assets\Scripts\InventoryManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

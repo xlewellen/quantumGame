@@ -208,6 +208,12 @@ MonoBehaviour:
   doublePrefab: {fileID: 7826614614921528482, guid: fd23b40fea3c99048a1a13a425c3642e, type: 3}
   prefabDirection: 0
   prefabType: 0
+  tiles:
+  - {fileID: 11400000, guid: ced2e0c8cb79a664d8f53da6d7906daf, type: 2}
+  - {fileID: 11400000, guid: 94f440e2f4d10dd429638d3f4b573322, type: 2}
+  - {fileID: 11400000, guid: 6b24a7af5c641304fb9005bea0bd3b2f, type: 2}
+  - {fileID: 11400000, guid: eb9f890298f7a3c43ac3ca0193609b3e, type: 2}
+  map: {fileID: 5663455199209606327, guid: 0f9f18683fbc91546b1cd2ba77cfd157, type: 3}
 --- !u!61 &2772410869224876446
 BoxCollider2D:
   m_ObjectHideFlags: 0

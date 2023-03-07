@@ -274,4 +274,5 @@ MonoBehaviour:
   alwaysConnect: 0
   objToConnect: []
   tilesToConnect: []
+  tilesToConnect2: []
   checkSelf: 1

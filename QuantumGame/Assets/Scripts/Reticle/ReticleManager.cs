@@ -18,12 +18,13 @@ public class ReticleManager : MonoBehaviour
     public GameObject beltPrefab;
     public GameObject doublePrefab;
 
+
     public int prefabDirection;
     public int prefabType;
 
-
-/*    public Tilemap map;
-    public AdvancedRuleTile belt;*/
+    public AdvancedRuleTile[] tiles;
+    public Tilemap map;
+/*    public AdvancedRuleTile belt;*/
 
     private void Start()
     {
@@ -99,6 +100,9 @@ public class ReticleManager : MonoBehaviour
         if (type == -1)
         {
             obj.GetComponent<BeltManager>().direction = direction;
+            Vector3 vec = transform.position;
+            map.SetTile(new Vector3Int((int)vec.x, (int)vec.y, (int)vec.z), tiles[direction]);
+
         }
         else {
             obj.GetComponent<GateManager>().gate = type;
@@ -162,8 +166,8 @@ public class ReticleManager : MonoBehaviour
             Destroy(contacts[i].gameObject);
         }
 
-/*        Vector3 vec = transform.position;
-        map.SetTile(new Vector3Int((int)vec.x, (int)vec.y, (int)vec.z), null);*/
+        Vector3 vec = transform.position;
+        map.SetTile(new Vector3Int((int)vec.x, (int)vec.y, (int)vec.z), null);
     }
 
     private void FixedUpdate()
