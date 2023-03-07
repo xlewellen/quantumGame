@@ -30,6 +30,8 @@ public class LevelSelect : MonoBehaviour
 
     public GameObject inventoryPrefab;
 
+    private GameObject invetoryObj;
+
 
     // Start is called before the first frame update
     void Start()
@@ -106,7 +108,7 @@ public class LevelSelect : MonoBehaviour
                 return;
         }
 
-        inventoryobj.GetComponent<InventoryManager>().setCounts(inventory);
+        invetoryObj.GetComponent<InventoryManager>().setCounts(inventory);
 
     }
 

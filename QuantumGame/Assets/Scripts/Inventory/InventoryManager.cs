@@ -35,7 +35,7 @@ public class InventoryManager : MonoBehaviour
     {
         int[] inventory = new int[6];
         for (int i = 0; i < 6; i++)
-            inventory[i] = 100;
+            inventory[i] = 99;
         invCounts = inventory;
 
         // sets the counts of the inventory items programmatically
