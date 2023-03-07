@@ -6,7 +6,10 @@ TagManager:
   tags:
   - Object
   - Resource
-  - Belt
+  - belt
+  - single
+  - double
+  - Undefined
   layers:
   - Default
   - TransparentFX

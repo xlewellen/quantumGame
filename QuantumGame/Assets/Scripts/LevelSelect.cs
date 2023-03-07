@@ -28,7 +28,7 @@ public class LevelSelect : MonoBehaviour
 
     public GameObject reciever;
 
-    public GameObject inventoryobj;
+    public GameObject inventoryPrefab;
 
 
     // Start is called before the first frame update
@@ -49,6 +49,7 @@ public class LevelSelect : MonoBehaviour
 
 
     void OnSceneLoaded (Scene scene, LoadSceneMode mode) {
+        Instantiate(generator, new Vector3(0, 0, 0), Quaternion.identity);
         if (curLevel == 1) {
             Instantiate(generator, new Vector3(0,0,0), Quaternion.identity);
         } else if (curLevel == 2) {
