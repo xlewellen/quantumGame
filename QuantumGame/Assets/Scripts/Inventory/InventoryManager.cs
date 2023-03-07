@@ -39,12 +39,6 @@ public class InventoryManager : MonoBehaviour
         invCounts = inventory;
 
         // sets the counts of the inventory items programmatically
-        itemCount1.text = invCounts[0].ToString();
-        itemCount2.text = invCounts[1].ToString();
-        itemCount3.text = invCounts[2].ToString();
-        itemCount4.text = invCounts[3].ToString();
-        itemCount5.text = invCounts[4].ToString();
-        itemCount6.text = invCounts[5].ToString();
 
         invSelect = 0;
 
