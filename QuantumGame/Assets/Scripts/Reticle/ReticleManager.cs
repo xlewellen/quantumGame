@@ -16,6 +16,7 @@ public class ReticleManager : MonoBehaviour
 
     public GameObject gatePrefab;
     public GameObject beltPrefab;
+    public GameObject doublePrefab;
 
     public int prefabDirection;
     public int prefabType;
@@ -93,7 +94,6 @@ public class ReticleManager : MonoBehaviour
             Debug.Log("Blocked");
             return;
         }
-        RemovePlaceable();
         Vector3 spawn = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         GameObject obj = Instantiate(prefab, spawn, Quaternion.identity);
         if (type == -1)
@@ -104,6 +104,35 @@ public class ReticleManager : MonoBehaviour
             obj.GetComponent<GateManager>().gate = type;
             obj.GetComponentInChildren<BeltManager>().direction = direction;
         }
+    }
+
+    private void PlaceDouble(GameObject prefab, int direction, int type) {
+
+        BoxCollider2D collider;
+
+        if (direction == 0 || direction == 2)
+            collider = transform.GetChild(1).GetComponent<BoxCollider2D>();
+        else
+            collider = transform.GetChild(0).GetComponent<BoxCollider2D>();
+
+        if (collider.IsTouchingLayers(LayerMask.GetMask("Placeable", "Unplaceable", "Belt")))
+        {
+            Debug.Log("Blocked");
+        }
+
+        else
+        {
+            Vector3 spawn = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            GameObject obj = Instantiate(prefab, spawn, Quaternion.identity);
+
+            obj.GetComponent<DoubleGateManager>().gate = type;
+            obj.GetComponent<DoubleGateManager>().direction = direction;
+        }
+
+        boxCollider.size = new Vector2(0.8f, 0.8f);
+        boxCollider.offset = new Vector2(0, 0);
+
+
     }
 
 /*    private void PlaceBelt(AdvancedRuleTile belt) {
@@ -147,6 +176,10 @@ public class ReticleManager : MonoBehaviour
             PlaceUnitary(beltPrefab, prefabDirection);
         if (Input.GetKey("x"))
             RemovePlaceable();
+        if (Input.GetKey("b"))
+        {
+            PlaceDouble(doublePrefab, prefabDirection, prefabType);
+        }
     }
 
 }
