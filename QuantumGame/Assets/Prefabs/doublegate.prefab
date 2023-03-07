@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2248826684647807704}
   - component: {fileID: 7103126954061346340}
   - component: {fileID: 2245790386654372754}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: -5491682889398017580}
   m_Layer: 12
   m_Name: doublegate
-  m_TagString: Untagged
+  m_TagString: double
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,7 +175,7 @@ SpriteRenderer:
   m_SortingLayerID: 1061142331
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 925243213, guid: 1af3135f189da844fb14d8aa60c82f18, type: 3}
+  m_Sprite: {fileID: 561175155, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   gate: 0
   direction: 0
   sprites:
-  - {fileID: 925243213, guid: 1af3135f189da844fb14d8aa60c82f18, type: 3}
+  - {fileID: 561175155, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
   - {fileID: 199605173, guid: 1af3135f189da844fb14d8aa60c82f18, type: 3}
 --- !u!1 &7870515591230048427
 GameObject:
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 1509286453492823981}
   - component: {fileID: 8843133585361152666}
   - component: {fileID: 2031435532413879598}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1618349198027127988, guid: 7cd0e3a44dceece4b8e565157ea50c21, type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd0e3a44dceece4b8e565157ea50c21, type: 3}
@@ -470,7 +470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1618349198027127988, guid: 7cd0e3a44dceece4b8e565157ea50c21, type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd0e3a44dceece4b8e565157ea50c21, type: 3}

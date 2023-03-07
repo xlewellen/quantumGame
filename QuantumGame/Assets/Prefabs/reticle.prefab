@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: -513684073, guid: 58567a0d09cd7c54380f5b41e28bb1bb, type: 3}
-  - {fileID: -473333599, guid: 58567a0d09cd7c54380f5b41e28bb1bb, type: 3}
-  - {fileID: -201399709, guid: 58567a0d09cd7c54380f5b41e28bb1bb, type: 3}
-  - {fileID: -1412943832, guid: 58567a0d09cd7c54380f5b41e28bb1bb, type: 3}
+  - {fileID: -2032266203, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
+  - {fileID: 1732219716, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
+  - {fileID: 354398372, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
+  - {fileID: -682027530, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
 --- !u!1 &2772410869224876433
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,9 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98771be68dc547548a55f060477a8cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatePrefab: {fileID: 7425495395830257529, guid: 2a0c88d8e50fdb34b98de70934aad484, type: 3}
-  beltPrefab: {fileID: 1618349198027127988, guid: 7cd0e3a44dceece4b8e565157ea50c21, type: 3}
-  doublePrefab: {fileID: 7826614614921528482, guid: fd23b40fea3c99048a1a13a425c3642e, type: 3}
   prefabDirection: 0
   prefabType: 0
   tiles:
@@ -227,11 +224,11 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.01}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5000022, y: 0.47555107}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1428572, y: 1.1428572}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

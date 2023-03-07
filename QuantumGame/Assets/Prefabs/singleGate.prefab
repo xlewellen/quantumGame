@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7425495395830257540}
   - component: {fileID: 7425495395830257543}
   m_Layer: 12
-  m_Name: singlegate
-  m_TagString: Untagged
+  m_Name: singleGate
+  m_TagString: single
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,10 +51,10 @@ MonoBehaviour:
   gate: 0
   spriteRenderer: {fileID: 7425495395830257541}
   sprites:
-  - {fileID: 1100246949, guid: 9b3086d934f99ab4c901e9e641a9085b, type: 3}
-  - {fileID: 1389651794, guid: fc83384456cfa6e4bafd4619bf0c472e, type: 3}
-  - {fileID: 242443384, guid: fc83384456cfa6e4bafd4619bf0c472e, type: 3}
-  - {fileID: 1423768409, guid: 9b3086d934f99ab4c901e9e641a9085b, type: 3}
+  - {fileID: 846377376, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
+  - {fileID: 1713573311, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
+  - {fileID: 1960266432, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
+  - {fileID: 1291984453, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
 --- !u!212 &7425495395830257541
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ SpriteRenderer:
   m_SortingLayerID: 1061142331
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1100246949, guid: 9b3086d934f99ab4c901e9e641a9085b, type: 3}
+  m_Sprite: {fileID: 846377376, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -211,7 +211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1618349198027127988, guid: 7cd0e3a44dceece4b8e565157ea50c21, type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd0e3a44dceece4b8e565157ea50c21, type: 3}

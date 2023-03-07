@@ -8,6 +8,12 @@ public class ReceiverManager : MonoBehaviour
 
     private int count = 0;
 
+    private void Update()
+    {
+        transform.GetChild(0).gameObject.GetComponent<ObjectManager>().alpha = targetalpha;
+        transform.GetChild(0).gameObject.GetComponent<ObjectManager>().beta = targetbeta;
+    }
+
     private void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.tag == "Object")
         {

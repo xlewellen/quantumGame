@@ -6,6 +6,7 @@ public class ObjectManager : MonoBehaviour
 {
     public float alpha;
     public float beta;
+    public bool kill = true;
     public SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
     private Vector3 direction;
@@ -15,7 +16,10 @@ public class ObjectManager : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         direction = new Vector3(0, 0, 0);
-        
+
+        if (kill)
+            Destroy(gameObject, 100);
+
     }
 
     private void FixedUpdate()
@@ -35,9 +39,9 @@ public class ObjectManager : MonoBehaviour
 
 
     private void SpriteUpdate() {
-        if (alpha == 1f && beta == 0f) spriteRenderer.sprite = sprites[0];
-        else if (alpha == 0f && beta == 1f) spriteRenderer.sprite = sprites[1];
-        else if (alpha > 0 && beta > 0) spriteRenderer.sprite = sprites[2];
+        if ((alpha == 1f || alpha == -1f) && beta == 0f) spriteRenderer.sprite = sprites[0];
+        else if (alpha == 0f && (beta == 1f || beta == -1f)) spriteRenderer.sprite = sprites[1];
+        else if ((alpha > 0 && beta > 0) || (alpha < 0 && beta < 0)) spriteRenderer.sprite = sprites[2];
         else spriteRenderer.sprite = sprites[3];
     }
 

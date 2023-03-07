@@ -14,7 +14,7 @@ public class LevelSelect : MonoBehaviour
     int SWAP_GATE = 5;
     
     // Maybe make it public sattic?
-    int[] inventory = new int[5];
+    int[] inventory = new int[6];
 
     public string menuScene;
 
@@ -27,6 +27,8 @@ public class LevelSelect : MonoBehaviour
     public GameObject generator;
 
     public GameObject reciever;
+
+    public GameObject inventoryobj;
 
 
     // Start is called before the first frame update
@@ -102,6 +104,9 @@ public class LevelSelect : MonoBehaviour
                 inventory[SWAP_GATE] = 6;
                 return;
         }
+
+        inventoryobj.GetComponent<InventoryManager>().setCounts(inventory);
+
     }
 
 }

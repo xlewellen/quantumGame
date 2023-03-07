@@ -9,6 +9,9 @@ public class GeneratorManager : MonoBehaviour
     public float spawnDelay = 2f;
     private float timeCount = 0f;
 
+    public float targetalpha;
+    public float targetbeta;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +22,8 @@ public class GeneratorManager : MonoBehaviour
         Vector3 spawn = new Vector3(transform.position.x + (0.5f), transform.position.y, transform.position.z);
         GameObject obj = Instantiate(objPrefab, spawn, Quaternion.identity);
 
-        obj.GetComponent<ObjectManager>().alpha = 0f;
-        obj.GetComponent<ObjectManager>().beta = 1f;
+        obj.GetComponent<ObjectManager>().alpha = targetalpha;
+        obj.GetComponent<ObjectManager>().beta = targetbeta;
 
         return obj;
     }
@@ -36,6 +39,9 @@ public class GeneratorManager : MonoBehaviour
 
             timeCount = 0f;
         }
+
+        transform.GetChild(0).gameObject.GetComponent<ObjectManager>().alpha = targetalpha;
+        transform.GetChild(0).gameObject.GetComponent<ObjectManager>().beta = targetbeta;
     }
 
 }
