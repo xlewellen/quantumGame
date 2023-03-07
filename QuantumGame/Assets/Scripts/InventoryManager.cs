@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -19,9 +20,13 @@ public class InventoryManager : MonoBehaviour
     private double moveTime = 0.2;
     // Start is called before the first frame update
 
+
+    public Text itemCount1, itemCount2, itemCount3, itemCount4, itemCount5, itemCount6;
+
     public void setCounts(int[] counts) {
         for (int i = 0; i < 6; i++)
             invCounts[i] = counts[i];
+
     }
 
 
@@ -32,6 +37,14 @@ public class InventoryManager : MonoBehaviour
         for (int i = 0; i < 6; i++)
             inventory[i] = 100;
         invCounts = inventory;
+
+        // sets the counts of the inventory items programmatically
+        itemCount1.text = invCounts[0].ToString();
+        itemCount2.text = invCounts[1].ToString();
+        itemCount3.text = invCounts[2].ToString();
+        itemCount4.text = invCounts[3].ToString();
+        itemCount5.text = invCounts[4].ToString();
+        itemCount6.text = invCounts[5].ToString();
 
         invSelect = 0;
 
