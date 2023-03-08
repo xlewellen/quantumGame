@@ -17,9 +17,6 @@ public class InventoryManager : MonoBehaviour
     public int invSelect;
     public int[] invCounts;
 
-    public AudioSource itemPlaced;
-    public GameObject hi;
-
     private double rotatecounter;
     private double moveTime = 0.2;
 
@@ -38,6 +35,7 @@ public class InventoryManager : MonoBehaviour
     {
 
         invSelect = 0;
+        instatiateReticle();
 
     }
 
