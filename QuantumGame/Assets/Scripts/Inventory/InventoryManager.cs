@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+//using UnityEngine.Audio;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class InventoryManager : MonoBehaviour
 
     public int invSelect;
     public int[] invCounts;
+
+    public AudioSource itemPlaced;
+    public GameObject hi;
 
     private double rotatecounter;
     private double moveTime = 0.2;
@@ -85,6 +89,8 @@ public class InventoryManager : MonoBehaviour
         invSelect--;
         if (invSelect < 0) invSelect = 5;
     }
+
+
     private void place() {
         if (invCounts[invSelect] > 0)
         {
@@ -99,6 +105,7 @@ public class InventoryManager : MonoBehaviour
 
             if (success)
                 invCounts[invSelect]--;
+
         }
 
     }
@@ -109,7 +116,10 @@ public class InventoryManager : MonoBehaviour
         if (index != -1)
             invCounts[index]++;
     }
+    private void addBack()
+    {
 
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -118,6 +128,8 @@ public class InventoryManager : MonoBehaviour
             place();
         if (Input.GetKey("x"))
             remove();
+        if (Input.GetKey("k"))
+            addBack();
         /*        if (Input.GetKey("c"))
                     PlaceUnitary(beltPrefab, prefabDirection);
                 if (Input.GetKey("x"))
