@@ -10,6 +10,12 @@ public class ReceiverManager : MonoBehaviour
     public int count = 0;
     public int target = 10;
 
+    public bool CheckFull() {
+        if (count >= target)
+            return true;
+        return false;
+    }
+
     private void Update()
     {
         transform.GetChild(0).gameObject.GetComponent<ObjectManager>().alpha = targetalpha;

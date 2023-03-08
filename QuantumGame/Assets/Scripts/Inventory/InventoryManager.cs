@@ -114,20 +114,31 @@ public class InventoryManager : MonoBehaviour
         if (index != -1)
             invCounts[index]++;
     }
-    private void addBack()
-    {
 
+    private bool CheckWin() {
+        objects = FindObjectsOfType<GameObject>();
+
+        for (int i = 0; i < objects.Length; i++)
+        {
+            if (objects[i].tag == "receiver")
+            {
+                if (!objects[i].GetComponent<ReceiverManager>().CheckFull())
+                    return false;
+            }
+        }
+        return true;
     }
+
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (CheckWin())
+            transform.GetChild(3).gameObject.SetActive(true);
         Rotate();
         if (Input.GetKey("z"))
             place();
         if (Input.GetKey("x"))
             remove();
-        if (Input.GetKey("k"))
-            addBack();
         /*        if (Input.GetKey("c"))
                     PlaceUnitary(beltPrefab, prefabDirection);
                 if (Input.GetKey("x"))
