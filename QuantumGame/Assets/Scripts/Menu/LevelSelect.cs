@@ -50,13 +50,9 @@ public class LevelSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
-        if (Input.GetKey("k")) {
-=======
-        if (Input.GetKeyDown(KeyCode.K)) {
->>>>>>> 37db45f451c20b427de5249eba88cdb4284b59cd
-            DestroyAllGameObjects();
-        }
+        //if (Input.GetKey("k")) {
+        //    DestroyAllGameObjects();
+        //}
     }
 
         private void instantiateGenerator(Vector3 location, float alpha, float beta) {
@@ -133,38 +129,19 @@ public class LevelSelect : MonoBehaviour
         switch (lvl) {
 
             case 1:
-                inventory[TRACKS] = 1;
-                inventory[H_GATE] = 2;
-                inventory[Z_GATE] = 3;
-                inventory[NOT_GATE] = 4;
-                inventory[M_GATE] = 5;
-                inventory[SWAP_GATE] = 6;
+                inventory[TRACKS] = 99;
+                inventory[H_GATE] = 99;
+                inventory[Z_GATE] = 99;
+                inventory[NOT_GATE] = 99;
+                inventory[M_GATE] = 99;
+                inventory[SWAP_GATE] = 99;
                 return;
         }
 
     }
-<<<<<<< HEAD
-    public void DestroyAllGameObjects()
-    {
-        GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
-        for (int i = 0; i < GameObjects.Length; i++) {
-            if (GameObjects[i].gameObject.tag != "Important") {
-            Destroy(GameObjects[i]);
-            }
-        }
-    }
-=======
-
-    public void DestroyAllGameObjects()
- {
-    Debug.Log("hi");
-     GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
- 
-     for (int i = 0; i < GameObjects.Length; i++)
-     {
-        Destroy(GameObjects[i]);
-     }
- }
-
->>>>>>> 37db45f451c20b427de5249eba88cdb4284b59cd
+    //public void DestroyAllGameObjects()
+    //{
+        // ;)
+        //SceneManager.LoadScene(menuScene);
+    //}
 }
