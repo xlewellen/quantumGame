@@ -101,12 +101,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alpha: 0
   beta: 0
+  kill: 1
   spriteRenderer: {fileID: 4414320855387207499}
   sprites:
-  - {fileID: 1789917139, guid: e0399faecfedf6f4f821203ce83bd84e, type: 3}
-  - {fileID: -582962904, guid: e0399faecfedf6f4f821203ce83bd84e, type: 3}
-  - {fileID: 386237650, guid: a88f7b508d11cfe47a9c89973e3f4a8b, type: 3}
-  - {fileID: -1517090158, guid: a88f7b508d11cfe47a9c89973e3f4a8b, type: 3}
+  - {fileID: -1234634349, guid: 7d2d639b1009e7d44b10b7ce0710d065, type: 3}
+  - {fileID: 880887223, guid: 7d2d639b1009e7d44b10b7ce0710d065, type: 3}
+  - {fileID: -1382452119, guid: 46cb56d197dd1854f83a4157be4361f0, type: 3}
+  - {fileID: 756813585, guid: 46cb56d197dd1854f83a4157be4361f0, type: 3}
 --- !u!50 &4414320855387207494
 Rigidbody2D:
   serializedVersion: 4

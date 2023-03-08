@@ -248,8 +248,8 @@ MonoBehaviour:
   gate: 0
   direction: 0
   sprites:
-  - {fileID: 561175155, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
-  - {fileID: 199605173, guid: 1af3135f189da844fb14d8aa60c82f18, type: 3}
+  - {fileID: -494991675, guid: 3a5e15405582a3c43ad2ecbb173a5d72, type: 3}
+  - {fileID: 957322413, guid: 3a5e15405582a3c43ad2ecbb173a5d72, type: 3}
 --- !u!1 &7870515591230048427
 GameObject:
   m_ObjectHideFlags: 0
