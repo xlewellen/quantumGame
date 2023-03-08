@@ -103,6 +103,7 @@ MonoBehaviour:
   spawnDelay: 2
   targetalpha: 1
   targetbeta: 0
+  genIsPaused: 1
 --- !u!1001 &478765898815602468
 PrefabInstance:
   m_ObjectHideFlags: 0
