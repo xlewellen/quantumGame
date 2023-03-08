@@ -50,12 +50,16 @@ public class LevelSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
+        if (Input.GetKey("k")) {
+=======
         if (Input.GetKeyDown(KeyCode.K)) {
+>>>>>>> 37db45f451c20b427de5249eba88cdb4284b59cd
             DestroyAllGameObjects();
         }
     }
 
-    private void instantiateGenerator(Vector3 location, float alpha, float beta) {
+        private void instantiateGenerator(Vector3 location, float alpha, float beta) {
         GameObject gen = Instantiate(generatorPrefab, location, Quaternion.identity);
         gen.GetComponent<GeneratorManager>().targetalpha = alpha;
         gen.GetComponent<GeneratorManager>().targetbeta = beta;
@@ -139,6 +143,17 @@ public class LevelSelect : MonoBehaviour
         }
 
     }
+<<<<<<< HEAD
+    public void DestroyAllGameObjects()
+    {
+        GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+        for (int i = 0; i < GameObjects.Length; i++) {
+            if (GameObjects[i].gameObject.tag != "Important") {
+            Destroy(GameObjects[i]);
+            }
+        }
+    }
+=======
 
     public void DestroyAllGameObjects()
  {
@@ -151,4 +166,5 @@ public class LevelSelect : MonoBehaviour
      }
  }
 
+>>>>>>> 37db45f451c20b427de5249eba88cdb4284b59cd
 }

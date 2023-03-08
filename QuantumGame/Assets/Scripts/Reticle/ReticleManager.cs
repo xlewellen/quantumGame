@@ -170,12 +170,31 @@ public class ReticleManager : MonoBehaviour
 
         return index;
     }
+    private void DestroyAllGameObjects()
+    {
+        //gather all game objects
+        GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
 
+        for (int i = 0; i < GameObjects.Length; i++)
+        {
+            //layer 12
+            if (GameObjects[i].gameObject.layer == 12 ||
+                GameObjects[i].gameObject.layer == 13 ||
+                GameObjects[i].gameObject.tag == "Object") {
+            //delete obj if tagged as gate or belt
+                Debug.Log("gameObject deleted: " + GameObjects[i]);
+                Destroy(GameObjects[i]);
+            }
+        }
+        //clear tilemap
+        Debug.Log("tilemap cleared: " + map);
+        map.ClearAllTiles();
+    }
     private void FixedUpdate()
     {
         PlayerMove();
         Rotate();
-
+        if (Input.GetKey("k")) DestroyAllGameObjects();
     }
 
 }

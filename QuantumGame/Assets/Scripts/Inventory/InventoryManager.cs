@@ -95,7 +95,10 @@ public class InventoryManager : MonoBehaviour
         if (index != -1)
             invCounts[index]++;
     }
+    private void addBack()
+    {
 
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -104,6 +107,8 @@ public class InventoryManager : MonoBehaviour
             place();
         if (Input.GetKey("x"))
             remove();
+        if (Input.GetKey("k"))
+            addBack();
         /*        if (Input.GetKey("c"))
                     PlaceUnitary(beltPrefab, prefabDirection);
                 if (Input.GetKey("x"))
