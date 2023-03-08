@@ -23,10 +23,9 @@ public class InventoryManager : MonoBehaviour
 
     public Text itemCount1, itemCount2, itemCount3, itemCount4, itemCount5, itemCount6;
 
-    public void setCounts(int[] counts) {
-        for (int i = 0; i < 6; i++)
-            invCounts[i] = counts[i];
-
+    public void setCounts(int[] counts)
+    {
+        invCounts = counts;
     }
 
 
@@ -42,9 +41,11 @@ public class InventoryManager : MonoBehaviour
 
         invSelect = 0;
 
-        reticle = Instantiate(reticlePrefab, new Vector3(0,0,0), Quaternion.identity);
-        reticle.GetComponent<ReticleManager>().map = map;
+    }
 
+    public void instatiateReticle() {
+        reticle = Instantiate(reticlePrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        reticle.GetComponent<ReticleManager>().map = map;
     }
 
     private void Rotate()
