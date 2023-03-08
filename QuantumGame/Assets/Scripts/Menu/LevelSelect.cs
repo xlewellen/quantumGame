@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class LevelSelect : MonoBehaviour
 {
@@ -32,10 +33,13 @@ public class LevelSelect : MonoBehaviour
 
     public GameObject tilemapPrefab;
 
-    private GameObject tilemap;
+    private GameObject tilemapObj;
 
     private GameObject inventoryObj;
 
+    private ArrayList recievers = new ArrayList();
+
+    private float half = 1 / Mathf.Sqrt(2);
 
     // Start is called before the first frame update
     void Start()
@@ -51,17 +55,34 @@ public class LevelSelect : MonoBehaviour
         }
     }
 
+    private void instantiateGenerator(Vector3 location, float alpha, float beta) {
+        GameObject gen = Instantiate(generatorPrefab, location, Quaternion.identity);
+        gen.GetComponent<GeneratorManager>().targetalpha = alpha;
+        gen.GetComponent<GeneratorManager>().targetbeta = beta;
+    }
+
+    private void instantiateReceiver(Vector3 location, float alpha, float beta, int target)
+    {
+        GameObject rec = Instantiate(recieverPrefab, location, Quaternion.identity);
+        rec.GetComponent<ReceiverManager>().targetalpha = alpha;
+        rec.GetComponent<ReceiverManager>().targetbeta = beta;
+        rec.GetComponent<ReceiverManager>().target = target;
+    }
+
     public void BackToMenu() {
         SceneManager.LoadScene(menuScene);
     }
 
 
     void OnSceneLoaded (Scene scene, LoadSceneMode mode) {
-
+        tilemapObj = Instantiate(tilemapPrefab);
         inventoryObj = Instantiate(inventoryPrefab);
         inventoryObj.GetComponent<InventoryManager>().setCounts(inventory);
+        inventoryObj.GetComponent<InventoryManager>().map = tilemapObj.transform.GetChild(0).GetComponent<Tilemap>();
+        inventoryObj.GetComponent<InventoryManager>().instatiateReticle();
         if (curLevel == 1) {
-            Instantiate(generatorPrefab, new Vector3(0,0,0), Quaternion.identity);
+            instantiateGenerator(new Vector3(-6, 3, 0), half, half);
+            instantiateReceiver(new Vector3(5, 0, 0), half, half, 10);
         } else if (curLevel == 2) {
             
         }

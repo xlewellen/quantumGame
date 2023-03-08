@@ -1065,6 +1065,7 @@ MonoBehaviour:
   generatorPrefab: {fileID: 1184474397652283946, guid: 650891fc2ba19e84a8c9cad4b1984a1d, type: 3}
   recieverPrefab: {fileID: 4633214678858044012, guid: 291930a0f1935474bb951330c6c38dab, type: 3}
   inventoryPrefab: {fileID: 4520345034384441273, guid: af2d76c1b30a9ed40a3a34e4603ba3e7, type: 3}
+  tilemapPrefab: {fileID: 2647742373620622199, guid: 104341893f2f7444c85c363a0aeb8c21, type: 3}
 --- !u!1 &1002179799
 GameObject:
   m_ObjectHideFlags: 0

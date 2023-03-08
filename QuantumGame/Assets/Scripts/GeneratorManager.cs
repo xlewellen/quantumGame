@@ -34,8 +34,6 @@ public class GeneratorManager : MonoBehaviour
         if (timeCount >= spawnDelay)
         {
             GameObject obj = spawnObj();
-            obj.GetComponent<ObjectManager>().HGate();
-            obj.GetComponent<ObjectManager>().Measure();
 
             timeCount = 0f;
         }
