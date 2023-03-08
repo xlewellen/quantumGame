@@ -13,9 +13,10 @@ public class LevelSelect : MonoBehaviour
     int NOT_GATE = 3;
     int M_GATE = 4;
     int SWAP_GATE = 5;
-    
+
     // Maybe make it public sattic?
-    int[] inventory = new int[6];
+
+    private int[] inventory = new int[6];
 
     public string menuScene;
 
@@ -44,7 +45,6 @@ public class LevelSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -75,7 +75,7 @@ public class LevelSelect : MonoBehaviour
     void OnSceneLoaded (Scene scene, LoadSceneMode mode) {
         tilemapObj = Instantiate(tilemapPrefab);
         inventoryObj = Instantiate(inventoryPrefab);
-        inventoryObj.GetComponent<InventoryManager>().setCounts(inventory);
+        inventoryObj.GetComponent<InventoryManager>().invCounts = inventory;
         inventoryObj.GetComponent<InventoryManager>().map = tilemapObj.transform.GetChild(0).GetComponent<Tilemap>();
         inventoryObj.GetComponent<InventoryManager>().instatiateReticle();
         if (curLevel == 1) {
