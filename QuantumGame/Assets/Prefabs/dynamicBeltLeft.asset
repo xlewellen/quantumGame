@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b261352b006914599f6d48cd53a4ec, type: 3}
   m_Name: dynamicBeltLeft
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 1787981276, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
+  m_DefaultSprite: {fileID: 1519358525, guid: 3a5e15405582a3c43ad2ecbb173a5d72, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
   - m_Id: 5
     m_Sprites:
-    - {fileID: -2083344783, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
+    - {fileID: 791257437, guid: 3a5e15405582a3c43ad2ecbb173a5d72, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -32,7 +32,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 1
     m_Sprites:
-    - {fileID: -1932365291, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
+    - {fileID: -318425054, guid: 3a5e15405582a3c43ad2ecbb173a5d72, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -46,7 +46,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 3
     m_Sprites:
-    - {fileID: 1787981276, guid: b4b6ef627a48d8c49bb0ad76a2036796, type: 3}
+    - {fileID: 1519358525, guid: 3a5e15405582a3c43ad2ecbb173a5d72, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
