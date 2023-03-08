@@ -5,3 +5,5 @@ QuantumGame/Packages
 QuantumGame/Temp
 QuantumGame/.vs
 QuantumGame/.vsconfig
+QuantumGame/Assembly-CSharp.csproj
+QuantumGame/obj
