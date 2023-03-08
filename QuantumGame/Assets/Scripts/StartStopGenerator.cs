@@ -6,7 +6,7 @@ public class StartStopGenerator : MonoBehaviour
 {
 
 
-    public GameObject[] generators;
+    public GameObject[] generators = new GameObject[5];
     
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,7 @@ public class StartStopGenerator : MonoBehaviour
 
     [ContextMenu("Stop Gen")]
     public void StopGenerators() {
+
         for (int i = 0; i < generators.Length; i++) {
             generators[i].GetComponent<GeneratorManager>().isGenActive = false;
         }
@@ -29,6 +30,7 @@ public class StartStopGenerator : MonoBehaviour
 
     [ContextMenu("Start Gen")]
     public void StartGenerators() {
+
         for (int i = 0; i < generators.Length; i++) {
             generators[i].GetComponent<GeneratorManager>().isGenActive = true;
         }
