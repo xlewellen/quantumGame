@@ -21,23 +21,15 @@ public class InventoryManager : MonoBehaviour
     // Start is called before the first frame update
 
 
-    public Text itemCount1, itemCount2, itemCount3, itemCount4, itemCount5, itemCount6;
-
-    public void setCounts(int[] counts)
+    public void setCounts(int[] arr)
     {
-        invCounts = counts;
+        invCounts = arr;
     }
 
 
     
     void Start()
     {
-        int[] inventory = new int[6];
-        for (int i = 0; i < 6; i++)
-            inventory[i] = 99;
-        invCounts = inventory;
-
-        // sets the counts of the inventory items programmatically
 
         invSelect = 0;
 

@@ -13,9 +13,10 @@ public class LevelSelect : MonoBehaviour
     int NOT_GATE = 3;
     int M_GATE = 4;
     int SWAP_GATE = 5;
-    
+
     // Maybe make it public sattic?
-    int[] inventory = new int[6];
+
+    private int[] inventory = new int[6];
 
     public string menuScene;
 
@@ -44,13 +45,16 @@ public class LevelSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         if (Input.GetKey("k")) {
+=======
+        if (Input.GetKeyDown(KeyCode.K)) {
+>>>>>>> 37db45f451c20b427de5249eba88cdb4284b59cd
             DestroyAllGameObjects();
         }
     }
@@ -77,7 +81,7 @@ public class LevelSelect : MonoBehaviour
     void OnSceneLoaded (Scene scene, LoadSceneMode mode) {
         tilemapObj = Instantiate(tilemapPrefab);
         inventoryObj = Instantiate(inventoryPrefab);
-        inventoryObj.GetComponent<InventoryManager>().setCounts(inventory);
+        inventoryObj.GetComponent<InventoryManager>().invCounts = inventory;
         inventoryObj.GetComponent<InventoryManager>().map = tilemapObj.transform.GetChild(0).GetComponent<Tilemap>();
         inventoryObj.GetComponent<InventoryManager>().instatiateReticle();
         if (curLevel == 1) {
@@ -139,6 +143,7 @@ public class LevelSelect : MonoBehaviour
         }
 
     }
+<<<<<<< HEAD
     public void DestroyAllGameObjects()
     {
         GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
@@ -148,4 +153,18 @@ public class LevelSelect : MonoBehaviour
             }
         }
     }
+=======
+
+    public void DestroyAllGameObjects()
+ {
+    Debug.Log("hi");
+     GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+ 
+     for (int i = 0; i < GameObjects.Length; i++)
+     {
+        Destroy(GameObjects[i]);
+     }
+ }
+
+>>>>>>> 37db45f451c20b427de5249eba88cdb4284b59cd
 }

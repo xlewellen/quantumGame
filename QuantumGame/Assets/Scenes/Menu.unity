@@ -892,6 +892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSelectScene: LevelSelect
+  tutorialScene: Tutorial
 --- !u!1001 &1644878126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -901,7 +902,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2710036180948426161, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
       propertyPath: m_text
-      value: OPTIONS
+      value: TUTORIAL
       objectReference: {fileID: 0}
     - target: {fileID: 2710036180948426161, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
       propertyPath: m_fontSize
@@ -993,7 +994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710036181597817838, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
       propertyPath: m_Name
-      value: Options Button
+      value: Tutorial Button
       objectReference: {fileID: 0}
     - target: {fileID: 2710036181599059092, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
       propertyPath: m_Color.b
@@ -1017,7 +1018,7 @@ PrefabInstance:
       objectReference: {fileID: 1338126337}
     - target: {fileID: 2710036181599059093, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenOptions
+      value: Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 2710036181599059093, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

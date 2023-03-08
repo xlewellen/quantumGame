@@ -12,10 +12,12 @@ public class GeneratorManager : MonoBehaviour
     public float targetalpha;
     public float targetbeta;
 
+    public bool isGenActive;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        isGenActive = false;
     }
 
     GameObject spawnObj() {
@@ -30,16 +32,26 @@ public class GeneratorManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        timeCount += Time.deltaTime;
-        if (timeCount >= spawnDelay)
-        {
-            GameObject obj = spawnObj();
+            timeCount += Time.deltaTime;
+            if (timeCount >= spawnDelay && isGenActive)
+            {
+                GameObject obj = spawnObj();
 
-            timeCount = 0f;
-        }
+                timeCount = 0f;
+            }
 
-        transform.GetChild(0).gameObject.GetComponent<ObjectManager>().alpha = targetalpha;
-        transform.GetChild(0).gameObject.GetComponent<ObjectManager>().beta = targetbeta;
+            transform.GetChild(0).gameObject.GetComponent<ObjectManager>().alpha = targetalpha;
+            transform.GetChild(0).gameObject.GetComponent<ObjectManager>().beta = targetbeta;
+    }
+
+    [ContextMenu("Stop Gen")]
+    public void StopGenerators() {
+        isGenActive = false;
+    }
+
+    [ContextMenu("Start Gen")]
+    public void StartGenerators() {
+        isGenActive = true;
     }
 
 }

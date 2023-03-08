@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
 
     // set this to whatever scene the Start button should go to
     public string levelSelectScene;
+    public string tutorialScene;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,10 @@ public class MainMenu : MonoBehaviour
 
     public void CloseOptions() {
 
+    }
+
+    public void Tutorial() {
+        SceneManager.LoadScene(tutorialScene);
     }
 
     public void QuitGame() {
