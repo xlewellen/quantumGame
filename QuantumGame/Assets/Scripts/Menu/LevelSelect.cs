@@ -46,7 +46,9 @@ public class LevelSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.K)) {
+            DestroyAllGameObjects();
+        }
     }
 
     public void BackToMenu() {
@@ -116,5 +118,16 @@ public class LevelSelect : MonoBehaviour
         }
 
     }
+
+    public void DestroyAllGameObjects()
+ {
+    Debug.Log("hi");
+     GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+ 
+     for (int i = 0; i < GameObjects.Length; i++)
+     {
+        Destroy(GameObjects[i]);
+     }
+ }
 
 }
