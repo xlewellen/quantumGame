@@ -21,11 +21,13 @@ public class ReticleManager : MonoBehaviour
 
     public AdvancedRuleTile[] tiles;
     public Tilemap map;
-/*    public AdvancedRuleTile belt;*/
+
+    private GameObject[] objects;
 
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        addBelts();
     }
 
     private float gridSet(float num) {
@@ -83,6 +85,20 @@ public class ReticleManager : MonoBehaviour
     {
         prefabDirection--;
         if (prefabDirection < 0) prefabDirection = 3;
+    }
+
+    private void addBelts()
+    {
+        objects = FindObjectsOfType<GameObject>();
+
+        for (int i = 0; i < objects.Length; i++)
+        {
+            if (objects[i].tag == "generator")
+            {
+                Vector3 vec = objects[i].transform.position;
+                map.SetTile(new Vector3Int((int)vec.x, (int)vec.y, (int)vec.z), tiles[0]);
+            }
+        }
     }
 
     public bool PlaceUnitary(GameObject prefab, int type = -1) {
@@ -194,7 +210,6 @@ public class ReticleManager : MonoBehaviour
     {
         PlayerMove();
         Rotate();
-        if (Input.GetKey("k")) DestroyAllGameObjects();
     }
 
 }

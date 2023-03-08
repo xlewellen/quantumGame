@@ -9,7 +9,7 @@ public class ReceiverManager : MonoBehaviour
 
     public int count = 0;
     public int target = 10;
-
+    private float half = 1f / Mathf.Sqrt(2f);
     public bool CheckFull() {
         if (count >= target)
             return true;
@@ -18,6 +18,15 @@ public class ReceiverManager : MonoBehaviour
 
     private void Update()
     {
+        if (targetalpha == 2f)
+            targetalpha = half;
+        if (targetbeta == 2f)
+            targetbeta = half;
+        if (targetalpha == -2f)
+            targetalpha = half * -1f;
+        if (targetbeta == -2f)
+            targetbeta = half * -1f;
+
         transform.GetChild(0).gameObject.GetComponent<ObjectManager>().alpha = targetalpha;
         transform.GetChild(0).gameObject.GetComponent<ObjectManager>().beta = targetbeta;
 
@@ -43,8 +52,6 @@ public class ReceiverManager : MonoBehaviour
         }
     }
 
-    private int GetCount() {
-        return count;
-    }
+
 
 }

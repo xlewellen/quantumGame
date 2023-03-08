@@ -23,7 +23,6 @@ public class InventoryManager : MonoBehaviour
     private GameObject[] objects;
     // Start is called before the first frame update
 
-
     public void setCounts(int[] arr)
     {
         invCounts = arr;
@@ -61,7 +60,7 @@ public class InventoryManager : MonoBehaviour
 
         if (rotatecounter < moveTime) rotatecounter += Time.deltaTime;
 
-        bool cw = Input.GetKey("l");
+        bool cw = Input.GetKey("k");
         bool ccw = Input.GetKey("j");
 
         if (rotatecounter >= moveTime && cw)
@@ -135,9 +134,9 @@ public class InventoryManager : MonoBehaviour
         if (CheckWin())
             transform.GetChild(3).gameObject.SetActive(true);
         Rotate();
-        if (Input.GetKey("z"))
+        if (Input.GetKey("space"))
             place();
-        if (Input.GetKey("x"))
+        if (Input.GetKey("r"))
             remove();
         /*        if (Input.GetKey("c"))
                     PlaceUnitary(beltPrefab, prefabDirection);

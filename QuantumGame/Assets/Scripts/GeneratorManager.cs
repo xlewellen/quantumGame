@@ -6,11 +6,12 @@ public class GeneratorManager : MonoBehaviour
 {
 
     public GameObject objPrefab;
-    public float spawnDelay = 2f;
+    private float spawnDelay = 2f;
     private float timeCount = 0f;
 
     public float targetalpha;
     public float targetbeta;
+    private float half = 1f / Mathf.Sqrt(2f);
 
     public bool isGenActive;
 
@@ -32,16 +33,25 @@ public class GeneratorManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-            timeCount += Time.deltaTime;
-            if (timeCount >= spawnDelay && isGenActive)
-            {
-                GameObject obj = spawnObj();
+        if (targetalpha == 2f)
+            targetalpha = half;
+        if (targetbeta == 2f)
+            targetbeta = half;
+        if (targetalpha == -2f)
+            targetalpha = half * -1f;
+        if (targetbeta == -2f)
+            targetbeta = half * -1f;
 
-                timeCount = 0f;
-            }
+        timeCount += Time.deltaTime;
+        if (timeCount >= spawnDelay && isGenActive)
+        {
+            GameObject obj = spawnObj();
 
-            transform.GetChild(0).gameObject.GetComponent<ObjectManager>().alpha = targetalpha;
-            transform.GetChild(0).gameObject.GetComponent<ObjectManager>().beta = targetbeta;
+            timeCount = 0f;
+        }
+
+        transform.GetChild(0).gameObject.GetComponent<ObjectManager>().alpha = targetalpha;
+        transform.GetChild(0).gameObject.GetComponent<ObjectManager>().beta = targetbeta;
     }
 
     [ContextMenu("Stop Gen")]
