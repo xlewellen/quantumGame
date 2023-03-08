@@ -22,8 +22,6 @@ public class LevelSelect : MonoBehaviour
 
     public string sampleScene;
 
-    public string lvl1, lvl2, lvl3, lvl4, lvl5;
-
     public int curLevel = 1;
 
     public GameObject generatorPrefab;
@@ -39,6 +37,9 @@ public class LevelSelect : MonoBehaviour
     private GameObject inventoryObj;
 
     private ArrayList recievers = new ArrayList();
+
+
+    public GameObject levelSelectScreen;
 
     private float half = 1 / Mathf.Sqrt(2);
 
@@ -74,7 +75,7 @@ public class LevelSelect : MonoBehaviour
     }
 
 
-    void OnSceneLoaded (Scene scene, LoadSceneMode mode) {
+    /*void OnSceneLoaded (Scene scene, LoadSceneMode mode) {
         tilemapObj = Instantiate(tilemapPrefab);
         inventoryObj = Instantiate(inventoryPrefab);
         inventoryObj.GetComponent<InventoryManager>().invCounts = inventory;
@@ -86,40 +87,51 @@ public class LevelSelect : MonoBehaviour
         } else if (curLevel == 2) {
             
         }
-    }
+    }*/
 
     // TODO: change menuScene with the approproate lvl variable
     // x: -6 to 5, y: -4 to 4
     public void LevelOne() {
+        DestroyAllGameObjects();
         makeInv(curLevel = 1);
-        SceneManager.LoadScene(sampleScene);
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        //SceneManager.LoadScene(sampleScene);
+        levelSelectScreen.SetActive(false);
+        //SceneManager.sceneLoaded += OnSceneLoaded;
+
+        tilemapObj = Instantiate(tilemapPrefab);
+        inventoryObj = Instantiate(inventoryPrefab);
+        inventoryObj.GetComponent<InventoryManager>().invCounts = inventory;
+        inventoryObj.GetComponent<InventoryManager>().map = tilemapObj.transform.GetChild(0).GetComponent<Tilemap>();
+        inventoryObj.GetComponent<InventoryManager>().instatiateReticle();
+
+        instantiateGenerator(new Vector3(-6, 3, 0), half, half);
+            instantiateReceiver(new Vector3(5, 0, 0), half, half, 10);
 
         //Instantiate(generator, new Vector3(3,0,0), Quaternion.identity);
     }
 
     public void LevelTwo() {
         makeInv(curLevel = 2);
-        SceneManager.LoadScene(sampleScene);
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        //SceneManager.LoadScene(sampleScene);
+        //SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void LevelThree() {
         makeInv(curLevel = 3);
-        SceneManager.LoadScene(sampleScene);
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        //SceneManager.LoadScene(sampleScene);
+        //SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void LevelFour() {
         makeInv(curLevel = 4);
-        SceneManager.LoadScene(sampleScene);
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        //SceneManager.LoadScene(sampleScene);
+        //SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void LevelFive() {
         makeInv(curLevel = 5);
-        SceneManager.LoadScene(sampleScene);
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        //SceneManager.LoadScene(sampleScene);
+        //SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
 // TODO: Add cases here to fill the inventory for each level
@@ -144,4 +156,33 @@ public class LevelSelect : MonoBehaviour
         // ;)
         //SceneManager.LoadScene(menuScene);
     //}
+
+
+    public Tilemap map1;
+    public GameObject reticle;
+
+
+    private void DestroyAllGameObjects()
+    {
+        map1 = reticle.GetComponent<ReticleManager>().map;
+
+        //gather all game objects
+        GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+
+        for (int i = 0; i < GameObjects.Length; i++)
+        {
+            //layer 12
+            if (GameObjects[i].gameObject.layer == 12 ||
+                GameObjects[i].gameObject.layer == 13 ||
+                GameObjects[i].gameObject.tag == "Object") {
+            //delete obj if tagged as gate or belt
+                Debug.Log("gameObject deleted: " + GameObjects[i]);
+                Destroy(GameObjects[i]);
+            }
+        }
+        //clear tilemap
+        Debug.Log("tilemap cleared: " + map1);
+        map1.ClearAllTiles();
+    }
+
 }

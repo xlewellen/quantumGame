@@ -58,9 +58,14 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+
+    public GameObject selectlevelScene;
+
     public void MenuButton() {
         hardReset();
-        SceneManager.LoadScene("Menu");
+        selectlevelScene.SetActive(true);
+        pauseMenuUI.SetActive(false);
+        //SceneManager.LoadScene("Menu");
         /*        hardReset();*/
     }
 
