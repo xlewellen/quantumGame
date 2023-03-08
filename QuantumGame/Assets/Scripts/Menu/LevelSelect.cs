@@ -74,52 +74,47 @@ public class LevelSelect : MonoBehaviour
     }
 
 
-    void OnSceneLoaded (Scene scene, LoadSceneMode mode) {
-        tilemapObj = Instantiate(tilemapPrefab);
-        inventoryObj = Instantiate(inventoryPrefab);
-        inventoryObj.GetComponent<InventoryManager>().invCounts = inventory;
-        inventoryObj.GetComponent<InventoryManager>().map = tilemapObj.transform.GetChild(0).GetComponent<Tilemap>();
-        inventoryObj.GetComponent<InventoryManager>().instatiateReticle();
-        if (curLevel == 1) {
-            instantiateGenerator(new Vector3(-6, 3, 0), half, half);
-            instantiateReceiver(new Vector3(5, 0, 0), half, half, 10);
-        } else if (curLevel == 2) {
-            
-        }
-    }
 
     // TODO: change menuScene with the approproate lvl variable
     // x: -6 to 5, y: -4 to 4
-    public void LevelOne() {
-        makeInv(curLevel = 1);
-        SceneManager.LoadScene(sampleScene);
-        SceneManager.sceneLoaded += OnSceneLoaded;
-
-        //Instantiate(generator, new Vector3(3,0,0), Quaternion.identity);
+    public void One() {
+        SceneManager.LoadScene("Level 1");
     }
 
-    public void LevelTwo() {
-        makeInv(curLevel = 2);
-        SceneManager.LoadScene(sampleScene);
-        SceneManager.sceneLoaded += OnSceneLoaded;
+    public void Two() {
+        SceneManager.LoadScene("Level 2");
     }
 
-    public void LevelThree() {
-        makeInv(curLevel = 3);
-        SceneManager.LoadScene(sampleScene);
-        SceneManager.sceneLoaded += OnSceneLoaded;
+    public void Three() {
+        SceneManager.LoadScene("Level 3");
     }
 
-    public void LevelFour() {
-        makeInv(curLevel = 4);
-        SceneManager.LoadScene(sampleScene);
-        SceneManager.sceneLoaded += OnSceneLoaded;
+    public void Four() {
+        SceneManager.LoadScene("Level 4");
     }
 
-    public void LevelFive() {
-        makeInv(curLevel = 5);
-        SceneManager.LoadScene(sampleScene);
-        SceneManager.sceneLoaded += OnSceneLoaded;
+    public void Five() {
+        SceneManager.LoadScene("Level 5");
+    }
+
+    public void Six() {
+        SceneManager.LoadScene("Level 6");
+    }
+
+    public void Seven() {
+        SceneManager.LoadScene("Level 7");
+    }
+
+    public void Eight() {
+        SceneManager.LoadScene("Level 8");
+    }
+
+    public void Nine() {
+        SceneManager.LoadScene("Level 9");
+    }
+
+    public void Ten() {
+        SceneManager.LoadScene("Level 10");
     }
 
 // TODO: Add cases here to fill the inventory for each level

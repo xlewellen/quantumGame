@@ -59,7 +59,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void MenuButton() {
-        hardReset();
+        //hardReset();
         SceneManager.LoadScene("Menu");
         /*        hardReset();*/
     }
