@@ -371,7 +371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8818522756695379746, guid: 5aa77ed08ef2a7b4e9c67051ca8332bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LevelFour
+      value: Four
       objectReference: {fileID: 0}
     - target: {fileID: 8818522756695379746, guid: 5aa77ed08ef2a7b4e9c67051ca8332bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -777,7 +777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8818522756695379746, guid: 5aa77ed08ef2a7b4e9c67051ca8332bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LevelTwo
+      value: Two
       objectReference: {fileID: 0}
     - target: {fileID: 8818522756695379746, guid: 5aa77ed08ef2a7b4e9c67051ca8332bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -887,7 +887,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 977008109}
         m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
-        m_MethodName: LevelTwo
+        m_MethodName: Two
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1801,7 +1801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8818522756695379746, guid: 5aa77ed08ef2a7b4e9c67051ca8332bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LevelThree
+      value: Three
       objectReference: {fileID: 0}
     - target: {fileID: 8818522756695379746, guid: 5aa77ed08ef2a7b4e9c67051ca8332bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1911,7 +1911,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 977008109}
         m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
-        m_MethodName: LevelFour
+        m_MethodName: Four
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2072,7 +2072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8818522756695379746, guid: 5aa77ed08ef2a7b4e9c67051ca8332bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LevelFive
+      value: Five
       objectReference: {fileID: 0}
     - target: {fileID: 8818522756695379746, guid: 5aa77ed08ef2a7b4e9c67051ca8332bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2163,7 +2163,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 977008109}
         m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
-        m_MethodName: LevelFive
+        m_MethodName: Five
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2411,7 +2411,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 977008109}
         m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
-        m_MethodName: LevelThree
+        m_MethodName: Three
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
