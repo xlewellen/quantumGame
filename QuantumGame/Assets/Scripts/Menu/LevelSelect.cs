@@ -24,13 +24,17 @@ public class LevelSelect : MonoBehaviour
 
     public int curLevel = 1;
 
-    public GameObject generator;
+    public GameObject generatorPrefab;
 
-    public GameObject reciever;
+    public GameObject recieverPrefab;
 
     public GameObject inventoryPrefab;
 
-    private GameObject invetoryObj;
+    public GameObject tilemapPrefab;
+
+    private GameObject tilemap;
+
+    private GameObject inventoryObj;
 
 
     // Start is called before the first frame update
@@ -51,9 +55,11 @@ public class LevelSelect : MonoBehaviour
 
 
     void OnSceneLoaded (Scene scene, LoadSceneMode mode) {
-        Instantiate(generator, new Vector3(0, 0, 0), Quaternion.identity);
+
+        inventoryObj = Instantiate(inventoryPrefab);
+        inventoryObj.GetComponent<InventoryManager>().setCounts(inventory);
         if (curLevel == 1) {
-            Instantiate(generator, new Vector3(0,0,0), Quaternion.identity);
+            Instantiate(generatorPrefab, new Vector3(0,0,0), Quaternion.identity);
         } else if (curLevel == 2) {
             
         }
@@ -95,7 +101,8 @@ public class LevelSelect : MonoBehaviour
 
 // TODO: Add cases here to fill the inventory for each level
     private void makeInv(int lvl) {
-        
+
+
         switch (lvl) {
 
             case 1:
@@ -107,8 +114,6 @@ public class LevelSelect : MonoBehaviour
                 inventory[SWAP_GATE] = 6;
                 return;
         }
-
-        invetoryObj.GetComponent<InventoryManager>().setCounts(inventory);
 
     }
 
