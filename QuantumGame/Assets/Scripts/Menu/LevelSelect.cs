@@ -46,10 +46,12 @@ public class LevelSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            DestroyAllGameObjects();
+        }
 
-    public void BackToMenu() {
+        public void BackToMenu() {
         SceneManager.LoadScene(menuScene);
     }
 
@@ -117,4 +119,14 @@ public class LevelSelect : MonoBehaviour
 
     }
 
+}
+public void DestroyAllGameObjects()
+{
+    GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+
+    for (int i = 0; i < GameObjects.Length; i++)
+    {
+        if (GameObjects[i].gameObject.tag != "Important") Destroy(GameObjects[i]);
+        Debug.Log("hi :)")
+    }
 }
