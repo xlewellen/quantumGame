@@ -7,30 +7,60 @@ public class StartStopGenerator : MonoBehaviour
 
 
     public GameObject[] generators;
-    
+    public GameObject[] objects;
+    public GameObject[] receivers;
+
     // Start is called before the first frame update
-    void Start()
+
+    public void softReset()
     {
+        objects = FindObjectsOfType<GameObject>();
 
-    }
+        for (int i = 0; i < objects.Length; i++)
+        {
+            if (objects[i].tag == "Object")
+            {
+                objects[i].GetComponent<ObjectManager>().Remove();
+            }
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
+        receivers = FindObjectsOfType<GameObject>();
 
+        for (int i = 0; i < receivers.Length; i++)
+        {
+            if (receivers[i].tag == "receiver")
+            {
+                receivers[i].GetComponent<ReceiverManager>().count = 0; ;
+            }
+        }
     }
 
     [ContextMenu("Stop Gen")]
     public void StopGenerators() {
-        for (int i = 0; i < generators.Length; i++) {
-            generators[i].GetComponent<GeneratorManager>().isGenActive = false;
+        generators = FindObjectsOfType<GameObject>();
+
+        for (int i = 0; i < generators.Length; i++)
+        {
+            if (generators[i].tag == "generator")
+            {
+                generators[i].GetComponent<GeneratorManager>().isGenActive = false;
+            }
         }
+
+        softReset();
+
     }
 
     [ContextMenu("Start Gen")]
     public void StartGenerators() {
-        for (int i = 0; i < generators.Length; i++) {
-            generators[i].GetComponent<GeneratorManager>().isGenActive = true;
+        generators = FindObjectsOfType<GameObject>();
+
+        for (int i = 0; i < generators.Length; i++)
+        {
+            if (generators[i].tag == "generator")
+            {
+                generators[i].GetComponent<GeneratorManager>().isGenActive = true;
+            }
         }
     }
 

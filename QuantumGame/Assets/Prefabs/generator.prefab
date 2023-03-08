@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1184474397652283949}
   m_Layer: 13
   m_Name: generator
-  m_TagString: Untagged
+  m_TagString: generator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   spawnDelay: 2
   targetalpha: 1
   targetbeta: 0
-  genIsPaused: 1
+  isGenActive: 0
 --- !u!1001 &478765898815602468
 PrefabInstance:
   m_ObjectHideFlags: 0

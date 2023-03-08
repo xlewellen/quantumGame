@@ -18,6 +18,8 @@ public class InventoryManager : MonoBehaviour
 
     private double rotatecounter;
     private double moveTime = 0.2;
+
+    private GameObject[] objects;
     // Start is called before the first frame update
 
 
@@ -33,6 +35,18 @@ public class InventoryManager : MonoBehaviour
 
         invSelect = 0;
 
+    }
+
+    public void softReset() {
+        objects = FindObjectsOfType<GameObject>();
+
+        for (int i = 0; i < objects.Length; i++)
+        {
+            if (objects[i].tag == "Object")
+            {
+                objects[i].GetComponent<ObjectManager>().Remove();
+            }
+        }
     }
 
     public void instatiateReticle() {

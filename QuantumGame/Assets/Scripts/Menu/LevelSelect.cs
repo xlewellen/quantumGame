@@ -129,7 +129,7 @@ public class LevelSelect : MonoBehaviour
         switch (lvl) {
 
             case 1:
-                inventory[TRACKS] = 1;
+                inventory[TRACKS] = 100;
                 inventory[H_GATE] = 2;
                 inventory[Z_GATE] = 3;
                 inventory[NOT_GATE] = 4;

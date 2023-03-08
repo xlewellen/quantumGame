@@ -7,7 +7,7 @@ public class ReceiverManager : MonoBehaviour
     public float targetalpha;
     public float targetbeta;
 
-    private int count = 0;
+    public int count = 0;
     public int target = 10;
 
     private void Update()

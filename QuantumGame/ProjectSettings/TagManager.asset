@@ -9,7 +9,9 @@ TagManager:
   - belt
   - single
   - double
-  - Undefined
+  - generator
+  - receiver
+  - important
   layers:
   - Default
   - TransparentFX
