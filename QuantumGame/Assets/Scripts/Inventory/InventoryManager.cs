@@ -60,18 +60,17 @@ public class InventoryManager : MonoBehaviour
 
         if (rotatecounter < moveTime) rotatecounter += Time.deltaTime;
 
-        bool cw = Input.GetKey("k");
-        bool ccw = Input.GetKey("j");
+        bool cw = Input.GetKeyDown("k");
+        bool ccw = Input.GetKeyDown("j");
 
-        if (rotatecounter >= moveTime && cw)
+        if (cw)
         {
             RotateCW();
-            rotatecounter = 0;
         }
-        if (rotatecounter >= moveTime && ccw)
+        if (ccw)
         {
             RotateCCW();
-            rotatecounter = 0;
+
         }
     }
 
@@ -114,37 +113,13 @@ public class InventoryManager : MonoBehaviour
             invCounts[index]++;
     }
 
-    private bool CheckWin() {
-        objects = FindObjectsOfType<GameObject>();
-
-        for (int i = 0; i < objects.Length; i++)
-        {
-            if (objects[i].tag == "receiver")
-            {
-                if (!objects[i].GetComponent<ReceiverManager>().CheckFull())
-                    return false;
-            }
-        }
-        return true;
-    }
-
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (CheckWin())
-            transform.GetChild(3).gameObject.SetActive(true);
         Rotate();
         if (Input.GetKey("space"))
             place();
         if (Input.GetKey("r"))
             remove();
-        /*        if (Input.GetKey("c"))
-                    PlaceUnitary(beltPrefab, prefabDirection);
-                if (Input.GetKey("x"))
-                    RemovePlaceable();
-                if (Input.GetKey("b"))
-                {
-                    PlaceDouble(doublePrefab, prefabDirection, prefabType);
-                }*/
     }
 }

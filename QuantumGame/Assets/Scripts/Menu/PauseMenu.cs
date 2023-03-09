@@ -46,20 +46,10 @@ public class PauseMenu : MonoBehaviour
         Resume();
     }
 
-    private void hardReset() {
-        objects = FindObjectsOfType<GameObject>();
-
-        for (int i = 0; i < objects.Length; i++)
-        {
-            if (objects[i].tag != "important")
-            {
-                Destroy(objects[i].transform.gameObject);
-            }
-        }
-    }
 
     public void MenuButton() {
         //hardReset();
+        Resume();
         SceneManager.LoadScene("Menu");
         /*        hardReset();*/
     }

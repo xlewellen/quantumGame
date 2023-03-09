@@ -35,6 +35,11 @@ public class ReticleManager : MonoBehaviour
         return Mathf.Ceil(num);
     }
 
+    private void FixedUpdate()
+    {
+        PlayerMove();
+    }
+
     private void PlayerMove() {
         if (counter < moveTime) counter += Time.deltaTime;
 
@@ -56,23 +61,22 @@ public class ReticleManager : MonoBehaviour
             counter = 0;
 
         }
+        if (moveDelta.x == 0f && moveDelta.y == 0f)
+            counter = 0.1;
     }
 
     private void Rotate() {
 
         if (rotatecounter < moveTime) rotatecounter += Time.deltaTime;
 
-        bool cw = Input.GetKey("e");
-        bool ccw = Input.GetKey("q");
+        bool cw = Input.GetKeyDown("e");
+        bool ccw = Input.GetKeyDown("q");
 
-        if (rotatecounter >= moveTime && cw) {
+        if (cw)
             RotateCW();
-            rotatecounter = 0;
-        }
-        if (rotatecounter >= moveTime && ccw) {
+        if (ccw)
             RotateCCW();
-            rotatecounter = 0;
-        }
+
     }
 
     private void RotateCW()
@@ -206,9 +210,8 @@ public class ReticleManager : MonoBehaviour
         Debug.Log("tilemap cleared: " + map);
         map.ClearAllTiles();
     }
-    private void FixedUpdate()
+    private void Update()
     {
-        PlayerMove();
         Rotate();
     }
 
