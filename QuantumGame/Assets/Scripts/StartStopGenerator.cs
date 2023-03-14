@@ -37,6 +37,7 @@ public class StartStopGenerator : MonoBehaviour
 
     [ContextMenu("Stop Gen")]
     public void StopGenerators() {
+        transform.parent.GetComponent<InventoryManager>().activateReticle();
         generators = FindObjectsOfType<GameObject>();
 
         for (int i = 0; i < generators.Length; i++)
@@ -53,6 +54,7 @@ public class StartStopGenerator : MonoBehaviour
 
     [ContextMenu("Start Gen")]
     public void StartGenerators() {
+        transform.parent.GetComponent<InventoryManager>().inactivateReticle();
         generators = FindObjectsOfType<GameObject>();
 
         for (int i = 0; i < generators.Length; i++)

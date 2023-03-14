@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4710185284482698181}
   - component: {fileID: 4710185284482698182}
   - component: {fileID: 4710185284482698183}
+  - component: {fileID: 943741586934190728}
   m_Layer: 5
   m_Name: Start Generators
   m_TagString: Untagged
@@ -35,9 +36,9 @@ RectTransform:
   m_Father: {fileID: 4710185284841448580}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -318, y: -268}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 82, y: 32}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4710185284482698181
@@ -122,7 +123,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4710185284841448579}
+      - m_Target: {fileID: 943741586934190728}
         m_TargetAssemblyTypeName: StartStopGenerator, Assembly-CSharp
         m_MethodName: StartGenerators
         m_Mode: 1
@@ -134,6 +135,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &943741586934190728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710185284482698201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd387eb5298b8044984429fae986061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generators: []
+  objects: []
+  receivers: []
 --- !u!1 &4710185284950990838
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +270,6 @@ GameObject:
   - component: {fileID: 4710185284841448576}
   - component: {fileID: 4710185284841448577}
   - component: {fileID: 4710185284841448578}
-  - component: {fileID: 4710185284841448579}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -365,21 +380,6 @@ MonoBehaviour:
   map: {fileID: 0}
   invSelect: 0
   invCounts: 0c0000000200000003000000040000000500000006000000
---- !u!114 &4710185284841448579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4710185285236461046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd387eb5298b8044984429fae986061, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  generators: []
-  objects: []
-  receivers: []
 --- !u!1 &4710185285433742254
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 4710185285741772799}
   - component: {fileID: 4710185285741772784}
   - component: {fileID: 4710185285741772785}
+  - component: {fileID: 6801792501406143474}
   m_Layer: 5
   m_Name: Stop Generators
   m_TagString: Untagged
@@ -550,9 +551,9 @@ RectTransform:
   m_Father: {fileID: 4710185284841448580}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 319, y: -268}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -81, y: 32}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4710185285741772799
@@ -637,7 +638,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4710185284841448579}
+      - m_Target: {fileID: 6801792501406143474}
         m_TargetAssemblyTypeName: StartStopGenerator, Assembly-CSharp
         m_MethodName: StopGenerators
         m_Mode: 1
@@ -649,6 +650,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6801792501406143474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710185285741772787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd387eb5298b8044984429fae986061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generators: []
+  objects: []
+  receivers: []
 --- !u!1 &4710185286559708801
 GameObject:
   m_ObjectHideFlags: 0

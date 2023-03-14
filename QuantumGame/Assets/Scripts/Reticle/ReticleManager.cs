@@ -152,6 +152,12 @@ public class ReticleManager : MonoBehaviour
 
             obj.GetComponent<DoubleGateManager>().gate = type;
             obj.GetComponent<DoubleGateManager>().direction = prefabDirection;
+            Vector3 vec = transform.position;
+            map.SetTile(new Vector3Int((int)vec.x, (int)vec.y, (int)vec.z), tiles[prefabDirection]);
+            if (prefabDirection == 0 || prefabDirection == 2)
+                map.SetTile(new Vector3Int((int)vec.x, (int)vec.y + 1, (int)vec.z), tiles[prefabDirection]);
+            else
+                map.SetTile(new Vector3Int((int)vec.x - 1, (int)vec.y, (int)vec.z), tiles[prefabDirection]);
         }
 
         boxCollider.size = new Vector2(0.8f, 0.8f);
@@ -180,8 +186,16 @@ public class ReticleManager : MonoBehaviour
                 index = 0;
             if (tag == "single")
                 index = contacts[i].gameObject.GetComponent<GateManager>().gate + 1;
-            if (tag == "double")
+            if (tag == "double") {
                 index = 5;
+                int dir = contacts[i].gameObject.GetComponent<DoubleGateManager>().direction;
+                Vector3 doublevec = contacts[i].transform.position;
+                map.SetTile(new Vector3Int((int)doublevec.x, (int)doublevec.y, (int)doublevec.z), null);
+                if (dir == 0 || dir == 2)
+                    map.SetTile(new Vector3Int((int)doublevec.x, (int)doublevec.y+1, (int)doublevec.z), null);
+                else
+                    map.SetTile(new Vector3Int((int)doublevec.x - 1, (int)doublevec.y, (int)doublevec.z), null);
+            }
             Destroy(contacts[i].gameObject);
         }
 

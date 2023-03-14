@@ -28,8 +28,16 @@ public class InventoryManager : MonoBehaviour
         invCounts = arr;
     }
 
+    public void activateReticle() {
+        reticle.SetActive(true);
+    }
 
-    
+    public void inactivateReticle()
+    {
+        reticle.SetActive(false);
+    }
+
+
     void Start()
     {
 

@@ -163,7 +163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 70.8, y: 46.5}
+  m_AnchoredPosition: {x: 76, y: 46.5}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &282758038
@@ -442,7 +442,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2710036180948426161, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
       propertyPath: m_text
-      value: QUIT
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 2710036180948426161, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
       propertyPath: m_fontSize
@@ -553,16 +553,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2710036181599059093, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710036181599059093, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1996221083}
     - target: {fileID: 2710036181599059093, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitGame
+      value: MoveToScene
       objectReference: {fileID: 0}
     - target: {fileID: 2710036181599059093, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ChangeScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710036181599059093, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 2710036181599059094, guid: 21b7358defe3a9244bc269d595b903cb, type: 3}
       propertyPath: m_Pivot.x
@@ -912,7 +920,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: adamard
+  m_text: adamards
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f99853a3deecebc41886b5e0e0c9d614, type: 2}
   m_sharedMaterial: {fileID: 8662085239939502189, guid: f99853a3deecebc41886b5e0e0c9d614, type: 2}
@@ -1041,7 +1049,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
